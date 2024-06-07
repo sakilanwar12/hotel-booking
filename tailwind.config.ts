@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+       fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        robotoSlab: ['Roboto Slab', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

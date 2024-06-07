@@ -1,17 +1,18 @@
 import Header from "@/components/layouts/header/header";
+import Sidebar from "@/components/layouts/sidebar/sideber";
 import { Fragment } from "react";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Fragment>
       <Header />
-      <div className="flex">
-        <div className="w-[248px] h-screen overflow-y-auto  flex-none">Sidebar</div>
-        <div className="flex-1">
+      {/* sidebar */}
+      <div>
+        <Sidebar />
+        <div className="ps-[240px] p-6">
           {children}
         </div>
       </div>
-
     </Fragment>
   );
 };

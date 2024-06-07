@@ -4,7 +4,10 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --font-inter: 'Inter', sans-serif;
+    --font-roboto-slab: 'Roboto Slab', serif;
+
+    --background: 240 6% 97%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -72,6 +75,20 @@
   }
 
   body {
+    font-family: var(--font-inter);
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-roboto-slab);
+  }
+
+  a {
+    @apply transition-all duration-300 hover:text-primary;
   }
 }
