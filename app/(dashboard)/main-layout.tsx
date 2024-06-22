@@ -1,5 +1,5 @@
 import Header from "@/components/layouts/header/header";
-import Sidebar from "@/components/layouts/sidebar/sideber";
+import Sidebar from "@/components/layouts/sidebar";
 import { Fragment } from "react";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {

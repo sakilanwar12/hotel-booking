@@ -4,22 +4,66 @@ export const menus = [
   {
     title: "Dashboard",
     href: "#",
-    icon:Home
+    icon: Home,
+    child: [
+      {
+        title: "Dashboard",
+        href:"dashboard"
+      },
+      {
+        title: "Ecommerce",
+        href:"#"
+      }
+    ]
   },
   {
     title: "Pages & Layouts",
     href: "#",
-    icon:Grid
+    icon: Grid,
+    child: [
+      {
+        title: "Education Apps",
+        href: "education-apps",
+      },
+      {
+        title:"Ecommerce",
+        href:"ecommerce"
+      }
+    ]
   },
   {
     title: "Forms",
     href: "#",
-    icon:ThreeCard
+    icon: ThreeCard,
+    child: [
+      {
+        title: "Input",
+        href: "#",
+      },
+      {
+        title:"Input Group",
+        href:"#"
+      }
+    ]
   },
   {
     title: "Components",
     href: "#",
-    icon:Components
+    icon: Components,
+    child: [
+      {
+        title: "Alert",
+        href: "#",
+      },
+      {
+        title:"Avatar",
+        href:"#"
+      }
+    ]
   },
+  {
+    title: "Utilities",
+    href: "#",
+  }
 
 ]

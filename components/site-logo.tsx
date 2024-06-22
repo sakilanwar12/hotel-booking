@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SiteLogo = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("mt-4 px-2", className)}>
+    <div className={cn("", className)}>
       <Link href="#" className="font-robotoSlab text-base font-bold ">
         DashUI
       </Link>
