@@ -60,10 +60,6 @@ export const menus = [
         href:"#"
       }
     ]
-  },
-  {
-    title: "Utilities",
-    href: "#",
   }
 
 ]
