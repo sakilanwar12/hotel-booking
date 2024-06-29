@@ -11,13 +11,13 @@ import { cn } from "@/lib/utils";
 const Header = () => {
   const { collapsed, setCollapsed } = useSidebar();
   return (
-    <header className="h-14    border-b bg-card">
+    <header className="h-14 border-b bg-card">
       <div className="flex h-full items-center  gap-2">
         <div className="flex-none flex items-center gap-4 ">
           <div className="flex items-center justify-between py-4 px-4 relative z-50">
             <SiteLogo className="flex-none" />
             <div className={cn("ms-28 transition-all duration-300", {
-              "ms-10": collapsed
+              "ms-28 lg:ms-10": collapsed
             })}>
               <div
                 className={cn("flex flex-col items-center justify-center cursor-pointer gap-0.5 transition-all duration-300  w-7 h-7 rounded bg-primary/10 hover:bg-primary/20", {

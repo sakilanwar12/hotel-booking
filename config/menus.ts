@@ -52,12 +52,12 @@ export const menus = [
     icon: Components,
     child: [
       {
-        title: "Alert",
-        href: "#",
+        title: "Accordion",
+        href: "accordion",
       },
       {
-        title:"Avatar",
-        href:"#"
+        title:"Button",
+        href:"button"
       }
     ]
   }
