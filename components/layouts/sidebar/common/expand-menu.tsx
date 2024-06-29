@@ -18,7 +18,9 @@ const ExpandMenu = ({ menu }: ExpandMenuProps) => {
   return (
     <Collapsible>
       <CollapsibleTrigger asChild onClick={() => setOpen(!open)}>
-        <div className="flex items-center cursor-pointer py-2 px-1.5 w-full rounded group hover:bg-primary/10">
+        <div className={cn("flex items-center cursor-pointer py-2 px-1.5 w-full rounded group hover:bg-primary/10", {
+          "bg-primary": open
+        })}>
           {menu.icon && (
             <menu.icon className="w-4 h-4 flex-none me-2 text-primary/80 group-hover:text-primary" />
           )}

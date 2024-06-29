@@ -17,9 +17,11 @@ const CollapsedMenu = ({ menu }: CollapsedMenuProps) => {
       <TooltipProvider delayDuration={0}>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button variant="ghost" size="icon" className='hover:bg-primary group'>
-              <menu.icon className="w-5 h-5  text-primary/80 group-hover:text-primary-foreground" />
-            </Button>
+            <div className="w-full flex justify-center group">
+              <Button size="icon" variant="ghost" className="hover:bg-primary">
+                <menu.icon className="w-5 h-5  text-primary/80 group-hover:text-primary-foreground" />
+              </Button>
+            </div>
           </TooltipTrigger>
           <TooltipContent
             side='right'

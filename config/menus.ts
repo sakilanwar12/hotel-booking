@@ -1,6 +1,16 @@
 import { Components, Grid, Home, ThreeCard } from "@/components/svg";
 
-export const menus = [
+export interface SubmenuProps {
+  title: string;
+  href: string;
+}
+export interface MenuProps {
+  title: string;
+  href: string;
+  icon?: any;
+  child?: SubmenuProps[]
+}
+export const menus:MenuProps[] = [
   {
     title: "Dashboard",
     href: "#",
@@ -8,7 +18,7 @@ export const menus = [
     child: [
       {
         title: "Dashboard",
-        href:"dashboard"
+        href:"/dashboard"
       },
       {
         title: "Ecommerce",
@@ -53,11 +63,11 @@ export const menus = [
     child: [
       {
         title: "Accordion",
-        href: "accordion",
+        href: "/accordion",
       },
       {
         title:"Button",
-        href:"button"
+        href:"/button"
       }
     ]
   }
