@@ -1,6 +1,6 @@
-# Dashboard Admin UI Kit
+# ShopDash Admin Dashboard Template
 
-Welcome to the **Dashboard Admin UI Kit**! This project is a modern, responsive, and customizable admin dashboard template built with **Next.js**, **Shade CN**, and **Next Themes**. It leverages the power of these technologies to provide a seamless and efficient development experience.
+Welcome to the **ShopDash Admin Dashboard Template**! This project is a modern, responsive, and customizable admin dashboard template built with **Next.js**, **Shade CN**, and **Next Themes**. It leverages the power of these technologies to provide a seamless and efficient development experience.
 
 ## Table of Contents
 
