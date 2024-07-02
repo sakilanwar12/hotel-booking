@@ -1,25 +1,73 @@
-import * as React from "react"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-import { cn } from "@/lib/utils"
+export const inputVariants = cva(
+  " w-full   border  px-2  rounded  text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium  read-only:leading-9 read-only:bg-background  disabled:cursor-not-allowed disabled:opacity-50  transition duration-300 ",
+  {
+    variants: {
+      color: {
+        default:
+          "border-default-200 text-default focus:outline-none focus:border-primary disabled:bg-default-200  placeholder:text-accent-foreground/50",
+        primary:
+          "border-primary text-primary focus:outline-none focus:border-primary-700 disabled:bg-primary/30 disabled:placeholder:text-primary  placeholder:text-primary/70",
+        info: "border-info/50 text-info focus:outline-none focus:border-info-700 disabled:bg-info/30 disabled:placeholder:text-info  placeholder:text-info/70",
+        warning:
+          "border-warning/50 text-warning focus:outline-none focus:border-warning-700 disabled:bg-warning/30 disabled:placeholder:text-info  placeholder:text-warning/70",
+        success:
+          "border-success/50 text-success focus:outline-none focus:border-success-700 disabled:bg-success/30 disabled:placeholder:text-info  placeholder:text-success/70",
+        destructive:
+          "border-destructive/50 text-destructive focus:outline-none focus:border-destructive-700 disabled:bg-destructive/30 disabled:placeholder:text-destructive  placeholder:text-destructive/70",
+      },
+      size: {
+        sm: "h-8 text-xs read-only:leading-8",
+        md: "h-9 text-xs read-only:leading-9",
+        lg: "h-10 text-sm read-only:leading-10",
+        xl: "h-12 text-base read-only:leading-[48px]",
+      },
+    },
+
+    defaultVariants: {
+      color: "default",
+      size: "sm",
+    },
+  }
+);
 
 export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> { }
+  extends React.InputHTMLAttributes<HTMLInputElement>,
+  VariantProps<typeof inputVariants> {
+
+  color?: "primary" | "info" | "warning" | "success" | "destructive" | "default";
+  size?: any;
+}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
+  (
+    {
+      className,
+      type,
+      size,
+      color,
+      ...props
+    },
+    ref
+  ) => {
     return (
-      <input
-        type={type}
-        className={cn(
-          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-          className
-        )}
-        ref={ref}
-        {...props}
-      />
-    )
+      <div className="flex-1 w-full">
+        <input
+          type={type}
+          className={cn(
+            inputVariants({ color, size }),
+            className
+          )}
+          ref={ref}
+          {...props}
+        />
+      </div>
+    );
   }
-)
-Input.displayName = "Input"
+);
+Input.displayName = "Input";
 
-export { Input }
+export { Input };
