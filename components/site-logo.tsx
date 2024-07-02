@@ -19,7 +19,7 @@ const SiteLogo = ({ className }: { className?: string }) => {
 
         <span className={cn("font-robotoSlab text-lg font-bold",
           { "hidden": collapsed }
-        )}> eShop</span>
+        )}> ShopDash</span>
       </Link>
     </div>
   );
