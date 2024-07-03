@@ -1,5 +1,6 @@
+import { siteConfig } from '@/lib/site';
 import { create } from 'zustand';
-import { siteConfig } from '@/config/site';
+
 import { persist, createJSONStorage } from 'zustand/middleware';
 
 interface ThemeStoreState {

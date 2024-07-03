@@ -1,18 +1,11 @@
-"use client"
+"use client";
+import React from "react";
+import { Icon as IconIfyIcon } from "@iconify/react";
 import { cn } from "@/lib/utils";
-import { Icon as Iconify } from '@iconify/react';
-interface IconProps {
-  className?: string;
-  icon: string;
-}
-const Icon = ({ className, icon, ...props }: IconProps) => {
-  return (
-    <Iconify
-      icon={icon}
-      {...props}
-      className={cn(className)}
-    />
-  );
-};
+
+const Icon = React.forwardRef<React.ElementRef<typeof IconIfyIcon>, React.ComponentPropsWithoutRef<typeof IconIfyIcon>>(({ className, ...props }, ref) => {
+  return <IconIfyIcon className={cn("", className)} ref={ref} {...props} />;
+});
+Icon.displayName = "Icon";
 
 export { Icon };

@@ -1,6 +1,6 @@
 "use client";
 
-import { menus } from "@/config/menus";
+import { menus } from "@/lib/menus";
 import { useSidebar } from "@/store";
 import { useMediaQuery } from "@/hooks/useMediaquery";
 import MobileSidebar from "./mobile-sidebar";

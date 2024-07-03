@@ -1,19 +1,20 @@
+"use client"
 import Header from "@/components/layouts/header/header";
 import Sidebar from "@/components/layouts/sidebar";
-import { Fragment } from "react";
+import SessionProvider from "@/providers/session-provider";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
+
   return (
-    <Fragment>
+    <SessionProvider>
       <Header />
-      {/* sidebar */}
       <div>
         <Sidebar />
         <div className="ps-[240px] p-6">
           {children}
         </div>
       </div>
-    </Fragment>
+    </SessionProvider>
   );
 };
 

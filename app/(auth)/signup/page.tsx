@@ -1,4 +1,4 @@
-"use client"
+
 import Auth from "@/components/auth/auth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,18 +7,17 @@ import { Icon } from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { signIn } from "next-auth/react";
 import Link from "next/link";
 
-const Home = () => {
+const SignUp = () => {
   return (
     <Auth>
       <Card className="max-w-xs w-full relative">
         <CardContent>
-          <h2 className="text-center font-medium text-default-900">Sign In</h2>
+          <h2 className="text-center font-medium text-default-900">Sign Up</h2>
           <div className="text-center mt-1 text-sm font-medium text-default-700">
-            {"Need an account? "}
-            <Link href="/signup" className="text-primary hover:opacity-90">Sign Up</Link></div>
+            {"Already have an account? "}
+            <Link href="/" className="text-primary hover:opacity-90">Sign In</Link></div>
           <div className="flex gap-1 mt-4 px-4">
             <Button
               size="sm"
@@ -32,7 +31,6 @@ const Home = () => {
               size="sm"
               className="flex-1 text-default-700"
               variant="outline"
-              onClick={() => signIn("github")}
             >
               <Icon icon="devicon:github" className="w-4 h-4 me-1" />
               Use Github
@@ -50,19 +48,21 @@ const Home = () => {
                 <Input id="email" placeholder="example@gmail.com" />
               </div>
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <Label htmlFor="password" className="mb-0">Password</Label>
-                  <Link href="/forgot" className="text-xs font-medium text-primary hover:opacity-80">Forgot Password?</Link>
-                </div>
+                <Label htmlFor="password" className="mb-0">Password</Label>
                 <Input id="password" placeholder="Enter Password" />
+              </div>
+              <div>
+                <Label htmlFor="confirmPassword" className="mb-0">Confirm Password</Label>
+                <Input id="confirmPassword" placeholder="Enter Confirm Password" />
               </div>
               <div className="flex items-center gap-1">
                 <Checkbox id="remember" />
-                <Label htmlFor="remember" className="mb-0">Remember Me</Label>
+                <Label htmlFor="remember" className="mb-0">I accept</Label>
+                <Link href="#" className="text-xs text-primary ">Terms and Conditions</Link>
               </div>
             </div>
             <div className="mt-4">
-              <Button size="md" className="py-0 w-full">Sign In</Button>
+              <Button size="md" className="py-0 w-full">Sign Up</Button>
             </div>
           </form>
         </CardContent>
@@ -70,4 +70,4 @@ const Home = () => {
     </Auth>
   );
 }
-export default Home;
+export default SignUp;
