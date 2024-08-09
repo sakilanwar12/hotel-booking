@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Slab } from "next/font/google";
 import "./globals.css";
+import AuthProvider from "@/providers/auth-provider";
 
 const inter = Inter(
   {
@@ -24,7 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${robotoSlab.variable} bg-background`}>{children}</body>
+      <body className={`${inter.variable} ${robotoSlab.variable} bg-background`}>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   );
 }

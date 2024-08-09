@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 
-const Auth = ({ children }: { children: React.ReactNode }) => {
+const AuthBackground = ({ children }: { children: React.ReactNode }) => {
   return (
     <main
       className="flex justify-center items-center min-h-screen relative before:absolute before:top-0 before:start-0 before:w-full before:h-full before:bg-primary/10">
@@ -16,4 +16,4 @@ const Auth = ({ children }: { children: React.ReactNode }) => {
     </main>
   );
 }
-export default Auth;
+export default AuthBackground;
