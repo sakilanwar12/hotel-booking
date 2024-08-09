@@ -34,7 +34,6 @@ const Home = () => {
             <SocialLogin />
           </div>
       
-
           <div className="flex items-center gap-2 mt-4">
             <Separator />
             <div className="text-sm font-normal text-default-700">OR</div>

@@ -4,7 +4,6 @@ import { Icon } from "@/components/ui/icon";
 import { signIn } from "@/lib/auth"
 const SocialLogin = () => {
 
-
     return (
         <form >
             <div className="flex gap-1 mt-4 px-4">
@@ -15,7 +14,7 @@ const SocialLogin = () => {
                     type="submit"
                     formAction={async () => {
                         "use server";
-                        await signIn("google");
+                        await signIn("google",{redirectTo:"/dashboard"});
                     }}
                 >
                     <Icon icon="flat-color-icons:google" className="w-4 h-4 me-1" />
