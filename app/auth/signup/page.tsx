@@ -1,17 +1,16 @@
 
-import Auth from "@/components/auth/auth";
+
+import AuthBackground from "@/components/auth/auth-background";
+import RegisterForm from "@/components/auth/register-form";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Icon } from "@/components/ui/icon";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 const SignUp = () => {
   return (
-    <Auth>
+    <AuthBackground>
       <Card className="max-w-xs w-full relative">
         <CardContent>
           <h2 className="text-center font-medium text-default-900">Sign Up</h2>
@@ -41,33 +40,10 @@ const SignUp = () => {
             <div className="text-sm font-normal text-default-700">OR</div>
             <Separator />
           </div>
-          <form action="#" className="mt-3">
-            <div className="space-y-3">
-              <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" placeholder="example@gmail.com" />
-              </div>
-              <div>
-                <Label htmlFor="password" className="mb-0">Password</Label>
-                <Input id="password" placeholder="Enter Password" />
-              </div>
-              <div>
-                <Label htmlFor="confirmPassword" className="mb-0">Confirm Password</Label>
-                <Input id="confirmPassword" placeholder="Enter Confirm Password" />
-              </div>
-              <div className="flex items-center gap-1">
-                <Checkbox id="remember" />
-                <Label htmlFor="remember" className="mb-0">I accept</Label>
-                <Link href="#" className="text-xs text-primary ">Terms and Conditions</Link>
-              </div>
-            </div>
-            <div className="mt-4">
-              <Button size="md" className="py-0 w-full">Sign Up</Button>
-            </div>
-          </form>
+        <RegisterForm/>
         </CardContent>
       </Card>
-    </Auth>
+    </AuthBackground>
   );
 }
 export default SignUp;
