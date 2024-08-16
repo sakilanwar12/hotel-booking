@@ -12,14 +12,27 @@ type Inputs = {
     remember?: boolean
 }
 
-const AuthForm = () => {
+const LoginForm = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
-      } = useForm<Inputs>()
-      const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
-    
+    } = useForm<Inputs>()
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        try {
+
+            fetch("/api/user/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+        } catch (err: any) {
+            console.log(err);
+        }
+    }
+
     return (
         <form action="#" className="mt-3" onSubmit={handleSubmit(onSubmit)}>
             <div className="space-y-3">
@@ -52,4 +65,4 @@ const AuthForm = () => {
     );
 };
 
-export default AuthForm;
+export default LoginForm;

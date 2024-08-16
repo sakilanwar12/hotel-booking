@@ -4,8 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import AuthBackground from "@/components/auth/auth-background";
 import SocialLogin from "@/components/auth/social-login";
-import AuthForm from "@/components/auth/auth-form";
-
+import LoginForm from "@/components/auth/login-form";
 
 const Home = () => {
   return (
@@ -24,7 +23,7 @@ const Home = () => {
             <div className="text-sm font-normal text-default-700">OR</div>
             <Separator />
           </div>
-          <AuthForm />
+          <LoginForm />
         </CardContent>
       </Card>
     </AuthBackground >

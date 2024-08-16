@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
-
+import { useRouter } from 'next/navigation'
+import { registerUser } from "@/actions/auth-actions";
 type Inputs = {
     username: string
     email: string
@@ -13,27 +14,18 @@ type Inputs = {
     confirmPassword: string
 }
 const RegisterForm = () => {
+    const router = useRouter()
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<Inputs>()
-    const onSubmit: SubmitHandler<Inputs> = async(data) =>{
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
         try {
-            const response = await fetch('/auth/user/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-
-            if (!response.ok) {
-                throw new Error('Registration failed');
+            const result = await registerUser(data);
+            if(result.status === 'success') {
+                router.push('/');
             }
-
-            const result = await response.json();
-            console.log('Registration successful', result);
         } catch (error) {
             console.error('Error:', error);
         }
