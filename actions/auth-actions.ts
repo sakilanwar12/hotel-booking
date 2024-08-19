@@ -1,10 +1,10 @@
 'use server'
 import {signIn} from "@/lib/auth";
 export const registerUser = async (data: {
-    username: string;
+    name: string;
     email: string;
     password: string;
-    confirmPassword: string;
+    image?: string;
 }) => {
     try {
         const response = await fetch('/api/user/register', {
@@ -25,8 +25,6 @@ export const registerUser = async (data: {
         throw error; // Re-throw the error to handle it in the component
     }
 };
-
-
 
 
 export const loginUser = async (data: any) => {

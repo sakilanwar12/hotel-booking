@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${robotoSlab.variable} bg-background`}>
+      <body className={`${inter.variable} ${robotoSlab.variable} bg-background`} suppressHydrationWarning={true}>
         <AuthProvider>
           {children}
         </AuthProvider>

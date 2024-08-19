@@ -7,9 +7,11 @@ import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useRouter } from 'next/navigation'
 import { registerUser } from "@/actions/auth-actions";
+import { startTransition } from "react";
 type Inputs = {
-    username: string
+    name: string
     email: string
+    image?: string
     password: string
     confirmPassword: string
 }
@@ -20,23 +22,26 @@ const RegisterForm = () => {
         handleSubmit,
         formState: { errors },
     } = useForm<Inputs>()
-    const onSubmit: SubmitHandler<Inputs> = async (data) => {
-        try {
-            const result = await registerUser(data);
-            if(result.status === 'success') {
-                router.push('/');
+    const onSubmit: SubmitHandler<Inputs> =  (data) => {
+        startTransition(async () => {
+            try {
+                const result = await registerUser(data);
+                if(result.status === 'success') {
+                    router.push('/');
+                }
+            } catch (error) {
+                console.error('Error:', error);
             }
-        } catch (error) {
-            console.error('Error:', error);
-        }
+        })
+      
     }
     return (
-        <form action="#" className="mt-3" onSubmit={handleSubmit(onSubmit)}>
+        <form action="#" className="mt-3" onSubmit={handleSubmit(onSubmit)} method="POST">
             <div className="space-y-3">
                 <div className="space-y-1">
-                    <Label htmlFor="username">Username</Label>
-                    <Input id="username"  {...register("username", { required: "Your Username is required." })} />
-                    {errors.username && <p className="text-xs text-destructive mt-1">{errors.username.message}</p>}
+                    <Label htmlFor="name">name</Label>
+                    <Input id="name"  {...register("name", { required: "Your name is required." })} />
+                    {errors.name && <p className="text-xs text-destructive mt-1">{errors.name.message}</p>}
                 </div>
                 <div className="space-y-1">
                     <Label htmlFor="email">Email</Label>
