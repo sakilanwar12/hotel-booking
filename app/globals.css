@@ -4,10 +4,8 @@
 
 @layer base {
   :root {
-    --font-inter: 'Inter', sans-serif;
-    --font-roboto-slab: 'Roboto Slab', serif;
 
-    --background: 240 6% 97%;
+    --background: 224 48% 95%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;

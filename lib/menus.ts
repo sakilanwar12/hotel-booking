@@ -1,4 +1,4 @@
-import { Components, Grid, Home, ThreeCard } from "@/components/svg";
+
 
 export interface SubmenuProps {
   title: string;
@@ -14,7 +14,6 @@ export const menus:MenuProps[] = [
   {
     title: "Dashboard",
     href: "#",
-    icon: Home,
     child: [
       {
         title: "Dashboard",
@@ -29,7 +28,6 @@ export const menus:MenuProps[] = [
   {
     title: "Pages & Layouts",
     href: "#",
-    icon: Grid,
     child: [
       {
         title: "Education Apps",
@@ -44,7 +42,6 @@ export const menus:MenuProps[] = [
   {
     title: "Forms",
     href: "#",
-    icon: ThreeCard,
     child: [
       {
         title: "Input",
@@ -59,7 +56,6 @@ export const menus:MenuProps[] = [
   {
     title: "Components",
     href: "#",
-    icon: Components,
     child: [
       {
         title: "Accordion",

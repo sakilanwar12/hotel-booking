@@ -5,7 +5,6 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request, res: any) {
   try {
     let reqBody = await req.json();
-    console.log(reqBody)
     const foundUser = users.find((user) => user.email === reqBody.email);
     if (foundUser) {
       return NextResponse.json({
