@@ -21,7 +21,7 @@ const UserProfile = () => {
                     <AvatarFallback>SD</AvatarFallback>
                 </Avatar>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" >
+            <DropdownMenuContent align="end" className="lg:w-96">
                 <DropdownMenuLabel>Profile</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>

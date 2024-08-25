@@ -3,11 +3,11 @@ import SiteLogo from "@/components/site-logo";
 import GrayScaleButton from "./gray-scale-button";
 import Notification from "./notifications";
 import SearchContent from "./search-content";
-import ShortCut from "./short-cut";
 import ThemeButton from "./theme-button";
 import { useSidebar } from "@/store";
 import { cn } from "@/lib/utils";
 import UserProfile from "./user-profile";
+import ShoppingCart from "./cart";
 
 const Header = () => {
   const { collapsed, setCollapsed } = useSidebar();
@@ -49,7 +49,7 @@ const Header = () => {
         <div className="flex-1 flex items-center  gap-4 justify-end pe-10">
           <GrayScaleButton />
           <ThemeButton />
-          <ShortCut />
+          <ShoppingCart />
           <Notification />
           <UserProfile />
         </div>
