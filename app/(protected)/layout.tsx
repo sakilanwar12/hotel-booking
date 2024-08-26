@@ -13,8 +13,6 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
     return (
         <Fragment>
             <Header />
-  
-
             <div>
                 <Sidebar />
                 <div className="ps-[240px] p-6">

@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/site';
+import { siteConfig } from './site';
 import { create } from 'zustand';
 
 import { persist, createJSONStorage } from 'zustand/middleware';

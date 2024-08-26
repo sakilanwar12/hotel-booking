@@ -1,9 +1,23 @@
-import { Sun } from "lucide-react";
+"use client"
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const ThemeButton = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <div>
-      <Sun className="w-5 h-5 text-default-700 cursor-pointer" />
+      {theme === "dark" ? (
+        <Sun
+          className="w-5 h-5 text-default-700 cursor-pointer"
+          onClick={() => setTheme("light")}
+        />
+      ) : (
+        <Moon
+          className="w-5 h-5 text-default-700 cursor-pointer"
+          onClick={() => setTheme("dark")}
+        />
+      )}
     </div>
   );
 };

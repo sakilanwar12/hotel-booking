@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import AuthProvider from "@/providers/auth-provider";
+import ThemeProvider from "@/providers/theme-provider";
 
 
 export const metadata: Metadata = {
@@ -16,9 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-background"}  suppressHydrationWarning={true}>
+      <body className={inter.className + "shopdash-app"} suppressHydrationWarning={true}>
         <AuthProvider>
-          {children}
+           <ThemeProvider attribute="class" defaultTheme="light">
+            {children}
+          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>
