@@ -8,6 +8,7 @@ import { useSidebar } from "@/store";
 import { cn } from "@/lib/utils";
 import UserProfile from "./user-profile";
 import ShoppingCart from "./cart";
+import Apps from "./apps";
 
 const Header = () => {
   const { collapsed, setCollapsed } = useSidebar();
@@ -49,6 +50,7 @@ const Header = () => {
         <div className="flex-1 flex items-center  gap-4 justify-end pe-10">
           <GrayScaleButton />
           <ThemeButton />
+          <Apps/>
           <ShoppingCart />
           <Notification />
           <UserProfile />
