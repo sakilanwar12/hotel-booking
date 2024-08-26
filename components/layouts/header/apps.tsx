@@ -74,7 +74,7 @@ const Apps = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger>
-                <LayoutGrid className="w-6 h-6 text-default-700" />
+                <LayoutGrid className="w-5 h-5 text-default-700" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="lg:w-96">
                 <DropdownMenuLabel className='py-2 text-lg'>Related Apps</DropdownMenuLabel>

@@ -76,7 +76,7 @@ const ShoppingCart = () => {
     return (
         <DropdownMenu >
             <DropdownMenuTrigger>
-                <ShoppingCartIcon className="w-6 h-6" />
+                <ShoppingCartIcon className="w-6 h-6 text-default-700" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="lg:w-96">
                 <DropdownMenuItem className="flex justify-between items-center">

@@ -4,7 +4,7 @@ import React from 'react';
 const GrayScaleButton = () => {
   return (
     <div>
-      <Palette className="w-4 h-4 text-default-700" />
+      <Palette className="w-4 h-4 cursor-pointer text-default-700" />
     </div>
   );
 };
