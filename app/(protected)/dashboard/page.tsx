@@ -1,8 +1,9 @@
+import CustomBreadcrumb from "@/components/custom-breadcrumb";
 
 const Dashboard = () => {
   return (
     <div>
-      Dashboard
+      <CustomBreadcrumb pageTitle="Dashboard" />
     </div>
   );
 };
