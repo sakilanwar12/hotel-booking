@@ -12,7 +12,7 @@ import SearchContent from "./search-content";
 const Header = () => {
   const { collapsed, setCollapsed } = useSidebar();
   return (
-    <header className="h-16 border-b bg-card">
+    <header className="h-16 shadow bg-card">
       <div className="flex h-full items-center  gap-2">
         <div className="flex-none flex items-center gap-4 ">
           <div className="flex items-center justify-between py-4 px-4 relative z-50">

@@ -13,7 +13,7 @@ interface MainSidebarProps {
 const MainSidebar = ({ menus, collapsed }: MainSidebarProps) => {
 
   return (
-    <div className={cn("fixed top-0 start-0 w-[220px] h-screen border-r border-border z-10 bg-card transition-all duration-300 pt-16 -translate-x-[220px] lg:translate-x-0", {
+    <div className={cn("fixed top-0 start-0 w-[220px] h-screen shadow z-10 bg-card transition-all duration-300 pt-16 -translate-x-[220px] lg:translate-x-0", {
       "w-[220px] lg:w-16 translate-x-0": collapsed
     })}>
       <ScrollArea className="flex-1">
