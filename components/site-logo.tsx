@@ -11,7 +11,7 @@ const SiteLogo = ({ className }: { className?: string }) => {
       <Link href="#"
         className=" flex items-center gap-3">
         <Image
-          src={"/images/logo/logo-2.png"}
+          src="/images/logo/logo-2.png"
           alt="DashUI Logo"
           width={42}
           height={42}

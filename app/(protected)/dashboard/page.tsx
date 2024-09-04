@@ -1,11 +1,16 @@
 import CustomBreadcrumb from "@/components/custom-breadcrumb";
+import DashboardSelect from "@/components/dashboard-select";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { StatisticsWidget } from "@/components/widgets/statistics-widget";
-import { ArrowUp, Box, Speaker } from "lucide-react";
+import { ArrowUp, Box } from "lucide-react";
+import LineChart from "./line-chart";
+import PieChart from "./pie-chart";
+import DashboardDropdown from "@/components/dashboard-dropdown";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="space-y-6">
       <CustomBreadcrumb pageTitle="Dashboard" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatisticsWidget>
@@ -56,7 +61,46 @@ const Dashboard = () => {
             </Button>
           </div>
         </StatisticsWidget>
-   
+      </div>
+      <div className="grid grid-cols-12 gap-6">
+        <div className="col-span-12 lg:col-span-8">
+          <Card>
+            <CardHeader className="justify-between items-center mb-0 pb-0">
+              <CardTitle>Monthly Earning</CardTitle>
+              <DashboardSelect />
+            </CardHeader>
+            <CardContent className="py-0">
+              <LineChart height={300} />
+            </CardContent>
+          </Card>
+        </div>
+        <div className="col-span-12 lg:col-span-4">
+          <Card>
+            <CardHeader className="justify-between items-center mb-0 pb-0">
+              <CardTitle>Sales Overviw</CardTitle>
+              <DashboardSelect />
+            </CardHeader>
+            <CardContent className="py-0 pb-5">
+              <PieChart />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <Card>
+          <CardHeader className="flex  items-center">
+            <div className="flex-1">
+              <CardTitle>Sales by Countries</CardTitle>
+              <div className="mt-1.5 text-sm font-medium text-default-600">Monthly Sales Overview</div>
+            </div>
+            <div className="flex-none">
+              <DashboardDropdown />
+            </div>
+          </CardHeader>
+          <CardContent>
+
+          </CardContent>
+        </Card>
       </div>
 
     </div>
