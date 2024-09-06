@@ -171,3 +171,91 @@ export const activityData = [
         color: "destructive"
     }
 ]
+
+export type Product = {
+    id: number;
+    productName: string;
+    area: string;
+    price: number;
+    sales: number
+}
+export const products: Product[] = [
+    {
+      id: 1,
+      productName: "Smartphone X",
+      area: "North America",
+      price: 799,
+      sales: 1200
+    },
+    {
+      id: 2,
+      productName: "Tablet Pro",
+      area: "Europe",
+      price: 999,
+      sales: 850
+    },
+    {
+      id: 3,
+      productName: "Laptop Elite",
+      area: "Asia",
+      price: 1499,
+      sales: 600
+    },
+    {
+      id: 4,
+      productName: "Smartwatch 2",
+      area: "South America",
+      price: 299,
+      sales: 1500
+    },
+    {
+      id: 5,
+      productName: "Gaming Console Z",
+      area: "Australia",
+      price: 499,
+      sales: 900
+    }
+  ];
+  
+  // Define the type for an Order
+export type Order = {
+    orderId: number;
+    date: string;
+    amount: number;
+    status: "Shipped" | "Pending" | "Delivered" | "Cancelled" | "Processing";
+  };
+  
+
+ export const orders: Order[] = [
+    {
+      orderId: 101,
+      date: "2024-09-01",
+      amount: 250.75,
+      status: "Shipped"
+    },
+    {
+      orderId: 102,
+      date: "2024-09-03",
+      amount: 150.00,
+      status: "Pending"
+    },
+    {
+      orderId: 103,
+      date: "2024-09-05",
+      amount: 350.50,
+      status: "Delivered"
+    },
+    {
+      orderId: 104,
+      date: "2024-09-06",
+      amount: 99.99,
+      status: "Cancelled"
+    },
+    {
+      orderId: 105,
+      date: "2024-09-07",
+      amount: 500.00,
+      status: "Processing"
+    }
+  ];
+  

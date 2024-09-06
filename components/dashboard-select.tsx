@@ -18,7 +18,6 @@ const DashboardSelect = () => {
                     <SelectItem value="today">Today</SelectItem>
                     <SelectItem value="week">Week</SelectItem>
                     <SelectItem value="month">Month</SelectItem>
-                    <SelectItem value="year">Year</SelectItem>
                 </SelectGroup>
             </SelectContent>
         </Select>

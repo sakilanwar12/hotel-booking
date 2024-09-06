@@ -7,11 +7,13 @@ import { ArrowUp, Box } from "lucide-react";
 import LineChart from "./line-chart";
 import PieChart from "./pie-chart";
 import DashboardDropdown from "@/components/dashboard-dropdown";
-import { activityData, campaignData, revinueData, salesData } from "./data";
+import { activityData, campaignData, orders, products, revinueData, salesData } from "./data";
 import CountryItem from "./country-item";
 import RevinueItem from "./revinue-item";
 import CampaignItem from "./campaign-item";
 import ActivityItem from "./activity-item";
+import ProductsTable from "./products-table";
+import OrdersTable from "./orders-table";
 
 const Dashboard = () => {
   return (
@@ -160,7 +162,28 @@ const Dashboard = () => {
           </CardContent>
         </Card>
       </div>
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
+        <Card>
+          <CardHeader className="justify-between items-center mb-0 pb-0">
+            <CardTitle>Top Selling Products</CardTitle>
+            <DashboardSelect />
+          </CardHeader>
+          <CardContent>
+            <ProductsTable products={products} />
+          </CardContent>
+        </Card>
 
+        <Card>
+          <CardHeader className="justify-between items-center mb-0 pb-0">
+            <CardTitle>Latest Orders</CardTitle>
+            <DashboardSelect />
+          </CardHeader>
+          <CardContent>
+            <OrdersTable orders={orders} />
+          </CardContent>
+        </Card>
+
+      </div>
     </div>
   );
 };
