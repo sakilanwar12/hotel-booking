@@ -15,7 +15,7 @@ const ActivityItem = ({ item }: ActivityItemProps) => {
     return (
         <li className="flex items-center gap-4">
             <Button className="flex-none" size="icon" color={color}>
-                <Icon icon={icon} />
+                <Icon icon={icon} className="w-5 h-5 text-primary-foreground"/>
             </Button>
             <h5 className="flex-1">{title}</h5>
             <span className="flex-none">{time}</span>

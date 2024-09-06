@@ -102,9 +102,26 @@ const Dashboard = () => {
               <DashboardDropdown />
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-0">
             <ul className="space-y-4">
               {salesData.map((item, index) => <CountryItem key={index} item={item} />)}
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex  items-center">
+            <div className="flex-1">
+              <CardTitle>Monthly Campaign State</CardTitle>
+              <div className="mt-1.5 text-sm font-medium text-default-600">24.72k Social Visiters</div>
+            </div>
+            <div className="flex-none">
+              <DashboardDropdown />
+            </div>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <ul className="space-y-6 mt-2">
+              {campaignData.map((item, index) => <CampaignItem key={index} item={item} />)}
             </ul>
           </CardContent>
         </Card>
@@ -118,25 +135,9 @@ const Dashboard = () => {
               <DashboardDropdown />
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-0">
             <ul className="space-y-4 mt-2">
               {revinueData.map((item, index) => <RevinueItem key={index} item={item} />)}
-            </ul>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex  items-center">
-            <div className="flex-1">
-              <CardTitle>Monthly Campaign State</CardTitle>
-              <div className="mt-1.5 text-sm font-medium text-default-600">24.72k Social Visiters</div>
-            </div>
-            <div className="flex-none">
-              <DashboardDropdown />
-            </div>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-6 mt-2">
-              {campaignData.map((item, index) => <CampaignItem key={index} item={item} />)}
             </ul>
           </CardContent>
         </Card>
@@ -150,8 +151,8 @@ const Dashboard = () => {
               <DashboardDropdown />
             </div>
           </CardHeader>
-          <CardContent>
-            <ul className="space-y-6 mt-2">
+          <CardContent className="pt-0">
+            <ul className="space-y-6 mt-1.5">
               {
                 activityData.map((item, index) => <ActivityItem key={index} item={item} />)
               }

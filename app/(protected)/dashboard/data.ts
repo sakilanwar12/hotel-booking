@@ -139,35 +139,35 @@ export const activityData = [
         id: 1,
         title: "New Message",
         time: "5 min ago",
-        icon: "arcticons:x-twitter",
+        icon: "lets-icons:message-light",
         color: "primary"
     },
     {
         id: 2,
         title: "Team Meeting",
-        time: "5 min ago",
-        icon: "arcticons:x-twitter",
+        time: "10 min ago",
+        icon: "heroicons:user-group",
         color: "info"
     },
     {
         id: 3,
         title: "Sales Report",
-        time: "5 min ago",
-        icon: "arcticons:x-twitter",
+        time: "2 hour ago",
+        icon: "solar:chart-2-line-duotone",
         color: "warning"
     },
     {
         id: 4,
         title: "Client Meeting",
-        time: "5 min ago",
-        icon: "arcticons:x-twitter",
+        time: "3 days ago",
+        icon: "ei:user",
         color: "success"
     },
     {
         id: 5,
         title: "Design Meetup",
-        time: "5 min ago",
-        icon: "arcticons:x-twitter",
+        time: "5 days ago",
+        icon: "fluent:design-ideas-20-regular",
         color: "destructive"
     }
 ]
