@@ -1,5 +1,6 @@
 
-import Auth from "@/components/auth/auth";
+
+import AuthBackground from "@/components/auth/auth-background";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,7 +10,7 @@ import { MoveRight } from "lucide-react";
 
 const ForgotPassword = () => {
   return (
-    <Auth>
+    <AuthBackground>
       <Card className="max-w-xs w-full relative">
         <CardContent>
           <h2 className="text-center font-medium text-default-900">Your Email</h2>
@@ -28,7 +29,7 @@ const ForgotPassword = () => {
           </form>
         </CardContent>
       </Card>
-    </Auth>
+    </AuthBackground>
   );
 }
 export default ForgotPassword;
