@@ -7,8 +7,9 @@ import { ArrowUp, Box } from "lucide-react";
 import LineChart from "./line-chart";
 import PieChart from "./pie-chart";
 import DashboardDropdown from "@/components/dashboard-dropdown";
-import { salesData } from "./data";
+import { revinueData, salesData } from "./data";
 import CountryItem from "./country-item";
+import RevinueItem from "./revinue-item";
 
 const Dashboard = () => {
   return (
@@ -102,6 +103,22 @@ const Dashboard = () => {
           <CardContent>
             <ul className="space-y-4">
               {salesData.map((item, index) => <CountryItem key={index} item={item} />)}
+            </ul>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex  items-center">
+            <div className="flex-1">
+              <CardTitle>Revenue Sources</CardTitle>
+              <div className="mt-1.5 text-sm font-medium text-default-600">Analytics based on sources</div>
+            </div>
+            <div className="flex-none">
+              <DashboardDropdown />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-4">
+              {revinueData.map((item, index) => <RevinueItem key={index} item={item} />)}
             </ul>
           </CardContent>
         </Card>

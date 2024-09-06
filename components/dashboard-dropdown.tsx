@@ -11,7 +11,7 @@ const DashboardDropdown = () => {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon">
-                    <EllipsisVertical className="w-5 h-5 text-default-900" />
+                    <EllipsisVertical className="w-5 h-5 text-default-600" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

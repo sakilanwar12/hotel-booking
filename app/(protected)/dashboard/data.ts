@@ -49,3 +49,59 @@ export const salesData = [
     }
 ]
 
+export const revinueData = [
+    {
+        id:1,
+        name:"Facebook",
+        amount:"30,567",
+        isIncrease:true
+    },
+    {
+        id:2,
+        name:"Google",
+        amount:"20,567",
+        isIncrease:true
+    },
+    {
+        id:3,
+        name:"Twitter",
+        amount:"40,567",
+        isIncrease:true
+    },
+    {
+        id:4,
+        name:"Instagram",
+        amount:"50,567",
+        isIncrease:false
+    },
+    {
+        id:5,
+        name:"Linkedin",
+        amount:"60,567",
+        isIncrease:true
+    },
+    {
+        id:6,
+        name:"Youtube",
+        amount:"70,567",
+        isIncrease:true
+    },
+    {
+        id:7,
+        name:"Github",
+        amount:"80,567",
+        isIncrease:false
+    },
+    {
+        id:8,
+        name:"Dribble",
+        amount:"90,567",
+        isIncrease:false
+    },
+    {
+        id:9,
+        name:"Skype",
+        amount:"100,567",
+        isIncrease:false
+    }  
+]
