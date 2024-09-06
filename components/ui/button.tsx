@@ -10,17 +10,18 @@ const buttonVariants = cva(
     variants: {
       color: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        primary: "bg-primary text-primary-foreground hover:bg-primary/90",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        success: "bg-success text-success-foreground hover:bg-success/80",
+        info: "bg-info text-info-foreground hover:bg-info/80",
+        warning: "bg-warning text-warning-foreground hover:bg-warning/80",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+
       },
       variant: {
         ghost: "bg-transparent hover:bg-default hover:text-default-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        outline: "bg-transparent hover:bg-transparent text-default border border-default"
+        outline: "bg-transparent hover:bg-transparent text-default border border-default",
       },
       size: {
         sm: "h-8 text-xs rounded-md px-3",
@@ -40,7 +41,7 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
   VariantProps<typeof buttonVariants> {
   asChild?: boolean,
-  color?: 'default' | 'destructive' | 'outline' | 'secondary'
+  color?: 'default' | 'primary' | 'secondary' | 'success' | 'info' | 'warning'| 'destructive'
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

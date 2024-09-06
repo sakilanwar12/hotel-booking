@@ -7,9 +7,10 @@ import { ArrowUp, Box } from "lucide-react";
 import LineChart from "./line-chart";
 import PieChart from "./pie-chart";
 import DashboardDropdown from "@/components/dashboard-dropdown";
-import { revinueData, salesData } from "./data";
+import { campaignData, revinueData, salesData } from "./data";
 import CountryItem from "./country-item";
 import RevinueItem from "./revinue-item";
+import CampaignItem from "./campaign-item";
 
 const Dashboard = () => {
   return (
@@ -89,7 +90,7 @@ const Dashboard = () => {
           </Card>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <Card>
           <CardHeader className="flex  items-center">
             <div className="flex-1">
@@ -119,6 +120,22 @@ const Dashboard = () => {
           <CardContent>
             <ul className="space-y-4">
               {revinueData.map((item, index) => <RevinueItem key={index} item={item} />)}
+            </ul>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex  items-center">
+            <div className="flex-1">
+              <CardTitle>Monthly Campaign State</CardTitle>
+              <div className="mt-1.5 text-sm font-medium text-default-600">24.72k Social Visiters</div>
+            </div>
+            <div className="flex-none">
+              <DashboardDropdown />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-5">
+              {campaignData.map((item, index) => <CampaignItem key={index} item={item} />)}
             </ul>
           </CardContent>
         </Card>
