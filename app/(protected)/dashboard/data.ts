@@ -38,14 +38,6 @@ export const salesData = [
         sales_rate: "15.8%",
         image: "/images/all/germany.png",
         isUp: true
-    },
-    {
-        id: 6,
-        name: "Spain",
-        amount: "$42k",
-        sales_rate: "18.8%",
-        image: "/images/all/spain.png",
-        isUp: false
     }
 ]
 
@@ -91,18 +83,6 @@ export const revinueData = [
         name: "Github",
         amount: "80,567",
         isIncrease: false
-    },
-    {
-        id: 8,
-        name: "Dribble",
-        amount: "90,567",
-        isIncrease: false
-    },
-    {
-        id: 9,
-        name: "Skype",
-        amount: "100,567",
-        isIncrease: false
     }
 ]
 
@@ -126,28 +106,10 @@ export const campaignData = [
         color: "success"
     },
     {
-        id: 3,
-        name: "Facebook",
-        amount: "34,253k",
-        isIncrease: false,
-        rate: "9.8",
-        icon: "basil:facebook-outline",
-        color: "info"
-    },
-    {
-        id: 4,
-        name: "Instagram",
-        amount: "54,253k",
-        isIncrease: false,
-        rate: "9.8",
-        icon: "ph:instagram-logo-thin",
-        color: "warning"
-    },
-    {
         id: 5,
         name: "Linkedin",
         amount: "14,753k",
-        isIncrease: false,
+        isIncrease: true,
         rate: "9.8",
         icon: "basil:linkedin-outline",
         color: "destructive"
@@ -165,10 +127,47 @@ export const campaignData = [
         id: 7,
         name: "Twitter",
         amount: "64,253k",
-        isIncrease: false,
+        isIncrease: true,
         rate: "9.8",
         icon: "arcticons:x-twitter",
         color: "destructive"
     }
 ]
 
+export const activityData = [
+    {
+        id: 1,
+        title: "New Message",
+        time: "5 min ago",
+        icon: "arcticons:x-twitter",
+        color: "primary"
+    },
+    {
+        id: 2,
+        title: "Team Meeting",
+        time: "5 min ago",
+        icon: "arcticons:x-twitter",
+        color: "info"
+    },
+    {
+        id: 3,
+        title: "Sales Report",
+        time: "5 min ago",
+        icon: "arcticons:x-twitter",
+        color: "warning"
+    },
+    {
+        id: 4,
+        title: "Client Meeting",
+        time: "5 min ago",
+        icon: "arcticons:x-twitter",
+        color: "success"
+    },
+    {
+        id: 5,
+        title: "Design Meetup",
+        time: "5 min ago",
+        icon: "arcticons:x-twitter",
+        color: "destructive"
+    }
+]
