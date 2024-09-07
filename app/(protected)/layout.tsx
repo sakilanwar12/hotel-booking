@@ -1,3 +1,4 @@
+import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 import Sidebar from "@/components/layouts/sidebar";
 import { auth } from "@/lib/auth";
@@ -18,6 +19,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
                 <div className="ps-[240px] p-6">
                     {children}
                 </div>
+                <Footer/>
             </div>
         </Fragment>
     );
