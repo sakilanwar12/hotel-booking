@@ -1,8 +1,8 @@
 
+
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { forwardRef } from "react";
 
 interface MenuItemProps {
   item: {
@@ -18,7 +18,7 @@ const MenuItem = ({ item, className }: MenuItemProps) => {
   return (
     <Link
       href={href}
-      className={cn("text-sm font-robotoSlab text-default-700  ps-4 py-1 flex items-center gap-2 ",
+      className={cn("text-sm  font-robotoSlab text-default-700  ps-4 py-1 flex items-center gap-2 ",
         {
           "text-primary": pathname === href
         },
@@ -29,7 +29,7 @@ const MenuItem = ({ item, className }: MenuItemProps) => {
           "bg-primary": pathname === href
         }
       )}></span>
-      {title}
+      {title} 
     </Link>
   );
 }

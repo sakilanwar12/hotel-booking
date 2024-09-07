@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/collapsible"
 import MenuItem from './menu-item';
 import { useState } from 'react';
+import { Icon } from '@/components/ui/icon';
 
 interface ExpandMenuProps {
   menu: any
@@ -18,12 +19,12 @@ const ExpandMenu = ({ menu }: ExpandMenuProps) => {
   return (
     <Collapsible>
       <CollapsibleTrigger asChild onClick={() => setOpen(!open)}>
-        <div className={cn("flex items-center cursor-pointer py-2 px-1.5 w-full rounded group hover:bg-primary/10", {
+        <div className={cn("flex items-center cursor-pointer py-3 px-2.5 w-full rounded group hover:bg-primary/10", {
           "bg-primary": open
         })}>
-          {menu.icon && (
-            <menu.icon className="w-4 h-4 flex-none me-2 text-primary/80 group-hover:text-primary" />
-          )}
+          {
+            menu.icon &&  <Icon icon={menu.icon} className="w-4 h-4 flex-none me-2 text-default-700  group-hover:text-primary" />
+          }
           <span className="flex-1 text-xs font-medium font-robotoSlab text-default-700 mt-0.2 group-hover:text-primary">
             {menu.title}
           </span>

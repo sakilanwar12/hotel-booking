@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/tooltip"
 import MenuItem from './menu-item';
 import { Button } from '@/components/ui/button';
+import { Icon } from "@/components/ui/icon";
 interface CollapsedMenuProps {
   menu: any
 }
@@ -18,9 +19,10 @@ const CollapsedMenu = ({ menu }: CollapsedMenuProps) => {
         <Tooltip>
           <TooltipTrigger asChild>
             <div className="w-full flex justify-center group">
-              <Button size="icon" variant="ghost" className="hover:bg-primary">
-                {/* <menu.icon className="w-5 h-5  text-primary/80 group-hover:text-primary-foreground" /> */}
-                icon
+              <Button size="icon" variant="ghost">
+                {
+                  menu.icon && <Icon icon={menu.icon} className="w-4 h-4 flex-none me-2 text-default-700 " />
+                }
               </Button>
             </div>
           </TooltipTrigger>
