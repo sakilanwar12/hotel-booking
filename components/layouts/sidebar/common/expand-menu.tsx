@@ -9,18 +9,20 @@ import {
 import MenuItem from './menu-item';
 import { useState } from 'react';
 import { Icon } from '@/components/ui/icon';
+import { usePathname } from 'next/navigation';
 
 interface ExpandMenuProps {
   menu: any
 }
 const ExpandMenu = ({ menu }: ExpandMenuProps) => {
   const [open, setOpen] = useState<boolean>(false);
-
+ const pathName = usePathname();
+ const activeMenu = pathName.includes(menu.href);
   return (
     <Collapsible>
       <CollapsibleTrigger asChild onClick={() => setOpen(!open)}>
         <div className={cn("flex items-center cursor-pointer py-3 px-2.5 w-full rounded group hover:bg-primary/10", {
-          "bg-primary/10": open
+          "bg-primary/10": activeMenu || open
         })}>
           {
             menu.icon &&  <Icon icon={menu.icon} className="w-4 h-4 flex-none me-2 text-default-700  group-hover:text-primary" />

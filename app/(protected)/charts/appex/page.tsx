@@ -4,7 +4,7 @@ import BarChart from "./bar-chart";
 import AreaChart from "./area-chart";
 import FunnelChart from "./funnel-chart";
 
-const ChartTypeA = () => {
+const AppexChart = () => {
     return (
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
             <Card title="Line Chart">
@@ -23,4 +23,4 @@ const ChartTypeA = () => {
     );
 };
 
-export default ChartTypeA;
+export default AppexChart;

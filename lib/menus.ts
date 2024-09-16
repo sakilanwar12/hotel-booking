@@ -38,6 +38,21 @@ export const menus: MenuProps[] = [
     ]
   },
   {
+    title: "Pages",
+    href: "#",
+    icon: "simple-line-icons:docs",
+    child: [
+      {
+        title: "Authentication",
+        href: "education-apps",
+      },
+      {
+        title: "Ecommerce",
+        href: "ecommerce"
+      }
+    ]
+  },
+  {
     title: "Forms",
     href: "#",
     icon: "cil:input-hdmi",
@@ -64,23 +79,35 @@ export const menus: MenuProps[] = [
       {
         title: "Button",
         href: "/components/button"
+      },
+      {
+        title: "Dialog",
+        href: "/components/dialog"
+      },
+    ]
+  },
+  {
+    title: "Table",
+    href: "/table/basic",
+    icon: "heroicons:table-cells",
+    child: [
+      {
+        title: "Basic Table",
+        href: "/table/basic",
       }
     ]
   },
   {
-    title: "Pages",
-    href: "#",
-    icon: "simple-line-icons:docs",
+    title: "Charts",
+    href: "/charts/appex/a",
+    icon: "heroicons:chart-bar",
     child: [
       {
-        title: "Authentication",
-        href: "education-apps",
-      },
-      {
-        title: "Ecommerce",
-        href: "ecommerce"
+        title: "Appex Chart",
+        href: "/charts/appex",
       }
     ]
   },
+
 
 ]

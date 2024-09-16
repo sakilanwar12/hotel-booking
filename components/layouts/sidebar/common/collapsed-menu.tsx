@@ -15,8 +15,7 @@ interface CollapsedMenuProps {
 }
 const CollapsedMenu = ({ menu }: CollapsedMenuProps) => {
   const pathname = usePathname();
-  const activeMenu = menu.child.find((item: any) => item.href === pathname);
-  console.log(menu )
+  const activeMenu = pathname.includes(menu.href);
   return (
     <div className=' flex flex-col gap-5 items-center'>
       <TooltipProvider delayDuration={0}>
