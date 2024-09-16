@@ -19,7 +19,7 @@ const buttonVariants = cva(
 
       },
       variant: {
-        ghost: "bg-transparent hover:bg-default hover:text-default-foreground",
+        ghost: "bg-transparent hover:bg-primary/10 hover:text-default-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         outline: "bg-transparent hover:bg-transparent text-default border border-default",
       },
@@ -27,7 +27,7 @@ const buttonVariants = cva(
         sm: "h-8 text-xs rounded-md px-3",
         md: "h-9 ",
         lg: "h-11 rounded-md px-8",
-        icon: "h-8 w-8 p-0 rounded-full",
+        icon: "h-8 w-8 p-0  rounded-full",
       },
     },
     defaultVariants: {

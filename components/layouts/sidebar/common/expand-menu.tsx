@@ -14,13 +14,13 @@ interface ExpandMenuProps {
   menu: any
 }
 const ExpandMenu = ({ menu }: ExpandMenuProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <Collapsible>
       <CollapsibleTrigger asChild onClick={() => setOpen(!open)}>
         <div className={cn("flex items-center cursor-pointer py-3 px-2.5 w-full rounded group hover:bg-primary/10", {
-          "bg-primary": open
+          "bg-primary/10": open
         })}>
           {
             menu.icon &&  <Icon icon={menu.icon} className="w-4 h-4 flex-none me-2 text-default-700  group-hover:text-primary" />
@@ -29,7 +29,7 @@ const ExpandMenu = ({ menu }: ExpandMenuProps) => {
             {menu.title}
           </span>
           <ChevronRight
-            className={cn("w-3 h-3 text-default-500 flex-none transition-transform duration-300 group-hover:text-primary", {
+            className={cn("w-4 h-4 text-default-500 flex-none transition-transform duration-300 group-hover:text-primary", {
               "rotate-90": open,
             })} />
         </div>

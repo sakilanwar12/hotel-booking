@@ -19,10 +19,6 @@ export const menus: MenuProps[] = [
       {
         title: "Dashboard",
         href: "/dashboard"
-      },
-      {
-        title: "Ecommerce",
-        href: "#"
       }
     ]
   },
@@ -58,16 +54,16 @@ export const menus: MenuProps[] = [
   },
   {
     title: "Components",
-    href: "#",
+    href: "/accordion",
     icon: "arcticons:graphene-apps",
     child: [
       {
         title: "Accordion",
-        href: "/accordion",
+        href: "/components/accordion",
       },
       {
         title: "Button",
-        href: "/button"
+        href: "/components/button"
       }
     ]
   },

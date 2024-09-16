@@ -14,12 +14,14 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
     return (
         <Fragment>
             <Header />
-            <div>
-                <Sidebar />
-                <div className="ps-[240px] p-6">
+            <Sidebar />
+            <div className="h-[calc(100vh-64px)] w-full flex flex-col">
+                <div className="flex-1 ps-[240px] p-6">
                     {children}
                 </div>
-                <Footer/>
+                <div className="flex-none">
+                    <Footer />
+                </div>
             </div>
         </Fragment>
     );
