@@ -16,7 +16,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
             <Header />
             <Sidebar />
             <div className="h-[calc(100vh-64px)] w-full flex flex-col">
-                <div className="flex-1 ps-[240px] p-6">
+                <div className="flex-1 lg:ps-[240px] p-6">
                     {children}
                 </div>
                 <div className="flex-none">

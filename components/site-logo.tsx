@@ -17,8 +17,8 @@ const SiteLogo = ({ className }: { className?: string }) => {
           height={42}
         />
 
-        <span className={cn("font-robotoSlab text-lg font-bold",
-          { "hidden": collapsed }
+        <span className={cn("font-robotoSlab text-lg font-bold hidden lg:block",
+          { "lg:hidden": collapsed }
         )}> AdminOcean</span>
       </Link>
     </div>

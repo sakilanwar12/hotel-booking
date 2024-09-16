@@ -73,7 +73,7 @@ const Apps = () => {
     ];
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger className='hidden lg:block'>
                 <LayoutGrid className="w-5 h-5 text-default-700" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="lg:w-96">
