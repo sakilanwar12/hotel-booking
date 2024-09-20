@@ -79,7 +79,7 @@ const Notification = () => {
         <BellDot className="w-5 h-5 text-default-700" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="lg:w-96" >
-        <DropdownMenuLabel className="flex items-center py-2">Notifications <Badge className="ms-2 bg-destructive text-destructive-foreground">10</Badge></DropdownMenuLabel>
+        <DropdownMenuLabel className="flex items-center py-2">Notifications <Badge className="ms-2 bg-danger text-danger-foreground">10</Badge></DropdownMenuLabel>
         <DropdownMenuSeparator />
         <ScrollArea className="h-[400px]">
           {

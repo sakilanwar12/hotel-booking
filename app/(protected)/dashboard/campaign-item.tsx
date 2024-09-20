@@ -23,7 +23,7 @@ const CampaignItem = ({ item }: CampaignItemProps) => {
             <div className="flex-none text-sm text-default-800">{amount}</div>
             <div className={cn("text-sm font-medium", {
                 "text-success": isIncrease,
-                "text-destructive": !isIncrease
+                "text-danger": !isIncrease
             })}>{rate}%</div>
         </li>
     );

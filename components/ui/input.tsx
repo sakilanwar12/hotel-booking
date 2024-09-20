@@ -16,8 +16,8 @@ export const inputVariants = cva(
           "border-warning/50 text-warning focus:outline-none focus:border-warning-700 disabled:bg-warning/30 disabled:placeholder:text-info  placeholder:text-warning/70",
         success:
           "border-success/50 text-success focus:outline-none focus:border-success-700 disabled:bg-success/30 disabled:placeholder:text-info  placeholder:text-success/70",
-        destructive:
-          "border-destructive/50 text-destructive focus:outline-none focus:border-destructive-700 disabled:bg-destructive/30 disabled:placeholder:text-destructive  placeholder:text-destructive/70",
+        danger:
+          "border-danger/50 text-danger focus:outline-none focus:border-danger-700 disabled:bg-danger/30 disabled:placeholder:text-danger  placeholder:text-danger/70",
       },
       size: {
         sm: "h-8 text-xs read-only:leading-8",
@@ -38,7 +38,7 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
   VariantProps<typeof inputVariants> {
 
-  color?: "primary" | "info" | "warning" | "success" | "destructive" | "default";
+  color?: "primary" | "info" | "warning" | "success" | "danger" | "default";
   size?: any;
 }
 

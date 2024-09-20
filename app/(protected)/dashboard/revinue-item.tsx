@@ -18,7 +18,7 @@ const RevinueItem = ({ item }: RevinueItemProps) => {
                 isIncrease ?
                     <ChevronUp className="text-success" />
                     :
-                    <ChevronDown className="text-destructive" />
+                    <ChevronDown className="text-danger" />
 
             }
             </div>

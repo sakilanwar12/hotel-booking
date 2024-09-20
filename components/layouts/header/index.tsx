@@ -48,7 +48,7 @@ const Header = () => {
           </div>
 
         </div>
-        <div className="flex-1 flex items-center gap-4 lg:gap-6 justify-end pe-10">
+        <div className="flex-1 flex items-center gap-4 lg:gap-6 justify-end pe-6 lg:pe-10">
           <SearchContent />
           <ThemeButton />
           <Apps />

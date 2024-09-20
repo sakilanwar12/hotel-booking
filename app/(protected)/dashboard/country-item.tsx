@@ -31,8 +31,8 @@ const CountryItem = ({ item }: CountryItemProps) => {
                         <div className="text-sm text-success">{sales_rate}</div>
                     </div> :
                         <div  className="flex items-center gap-1">
-                            <ChevronDown className="text-destructive" />
-                            <div className="text-sm text-destructive">{sales_rate}</div>
+                            <ChevronDown className="text-danger" />
+                            <div className="text-sm text-danger">{sales_rate}</div>
                         </div>
                 }
 

@@ -16,6 +16,8 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Button } from "./button";
+import { Code } from "lucide-react";
 
 
 
@@ -38,11 +40,13 @@ const Card = ({ title, code, children }: CardSnippetProps) => {
         )}
         {code && (
           <div className="flex-none">
-            <Switch id="airplane-mode" onClick={toggle} />
+           <Button color="secondary" size="icon" variant={show?"default":"ghost"}  onClick={toggle}>
+            <Code className="w-4 h-4" />
+           </Button>
           </div>
         )}
       </CardHeader>
-      <CardContent className="py-2">
+      <CardContent >
         {children}
         <Collapsible open={show}>
           <CollapsibleContent className="CollapsibleContent">

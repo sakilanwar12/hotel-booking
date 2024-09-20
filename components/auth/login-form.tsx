@@ -48,12 +48,12 @@ const LoginForm = () => {
                         defaultValue="shopdash@gmail.com"
                         {...register("email", { required: "Your Email is required." })}
                     />
-                    {errors.email && <p className="text-xs text-destructive mt-1">{errors.email.message}</p>}
+                    {errors.email && <p className="text-xs text-danger mt-1">{errors.email.message}</p>}
                 </div>
                 <div>
                     <div className="flex items-center justify-between mb-2">
                         <Label htmlFor="password" className="mb-0">Password</Label>
-                        <Link href="/forgot" className="text-xs font-medium text-primary hover:opacity-80">
+                        <Link href="/auth/forgot" className="text-xs font-medium text-primary hover:opacity-80">
                             Forgot Password?
                         </Link>
                     </div>
@@ -63,7 +63,7 @@ const LoginForm = () => {
                         defaultValue="password"
                         {...register("password", { required: "Your Password is required." })}
                     />
-                    {errors.password && <p className="text-xs text-destructive mt-1">{errors.password.message}</p>}
+                    {errors.password && <p className="text-xs text-danger mt-1">{errors.password.message}</p>}
                 </div>
                 <div className="flex items-center gap-1">
                     <Checkbox id="remember" />

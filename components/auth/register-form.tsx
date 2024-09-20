@@ -41,22 +41,22 @@ const RegisterForm = () => {
                 <div className="space-y-1">
                     <Label htmlFor="name">name</Label>
                     <Input id="name"  {...register("name", { required: "Your name is required." })} />
-                    {errors.name && <p className="text-xs text-destructive mt-1">{errors.name.message}</p>}
+                    {errors.name && <p className="text-xs text-danger mt-1">{errors.name.message}</p>}
                 </div>
                 <div className="space-y-1">
                     <Label htmlFor="email">Email</Label>
                     <Input id="email" {...register("email", { required: "Your Email is required." })} />
-                    {errors.email && <p className="text-xs text-destructive mt-1">{errors.email.message}</p>}
+                    {errors.email && <p className="text-xs text-danger mt-1">{errors.email.message}</p>}
                 </div>
                 <div className="space-y-1">
                     <Label htmlFor="password" className="mb-0">Password</Label>
                     <Input id="password" {...register("password", { required: "Your Password is required." })} />
-                    {errors.password && <p className="text-xs text-destructive mt-1">{errors.password.message}</p>}
+                    {errors.password && <p className="text-xs text-danger mt-1">{errors.password.message}</p>}
                 </div>
                 <div className="space-y-1">
                     <Label htmlFor="confirmPassword" className="mb-0">Confirm Password</Label>
                     <Input id="confirmPassword" {...register("confirmPassword", { required: "Your Password is required." })} />
-                    {errors.confirmPassword && <p className="text-xs text-destructive mt-1">{errors.confirmPassword.message}</p>}
+                    {errors.confirmPassword && <p className="text-xs text-danger mt-1">{errors.confirmPassword.message}</p>}
                 </div>
                 <div className="flex items-center gap-1">
                     <Checkbox id="remember" />

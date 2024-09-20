@@ -22,13 +22,13 @@ const CustomBreadcrumb = ({ pageTitle }: { pageTitle: string }) => {
 
 
     return (
-        <div className="flex  flex-wrap justify-between gap-3 items-center mb-6">
+        <div className="flex  flex-col md:flex-row justify-between gap-3 md:items-center mb-6">
             {
                 pageTitle && <div className="flex-none">
                     <h2 className="font-medium text-default-900 text-lg">{pageTitle}</h2>
                 </div>
             }
-            <div className="flex-1 flex justify-end">
+            <div className="flex-1 flex md:justify-end">
                 <Breadcrumb>
                     <BreadcrumbList>
 

@@ -37,7 +37,7 @@ const Dashboard = () => {
             <div className="flex-1">
               <h3 className="text-base  text-default-900">New Orders</h3>
               <div className="text-3xl font-bold text-default-900 mt-2">350k+</div>
-              <div className="flex items-center gap-1 mt-2 text-sm"> <ArrowUp className="w-5 h-5 text-destructive" /><span className="text-destructive">29.36%</span> <span>Since last month</span></div>
+              <div className="flex items-center gap-1 mt-2 text-sm"> <ArrowUp className="w-5 h-5 text-danger" /><span className="text-danger">29.36%</span> <span>Since last month</span></div>
             </div>
             <Button className="flex-none h-12 w-12 p-0 rounded-full bg-info"  >
               <Box className="w-6 h-6 text-primary-foreground" />
@@ -56,14 +56,14 @@ const Dashboard = () => {
             </Button>
           </div>
         </StatisticsWidget>
-        <StatisticsWidget className="bg-destructive/10 hover:bg-destructive/20">
+        <StatisticsWidget className="bg-danger/10 hover:bg-danger/20">
           <div className="flex items-center">
             <div className="flex-1">
               <h3 className="text-base  text-default-900">Total Revenue</h3>
               <div className="text-3xl font-bold text-default-900 mt-2">150k+</div>
-              <div className="flex items-center gap-1 mt-2 text-sm"> <ArrowUp className="w-5 h-5 text-destructive" /><span className="text-destructive">29.36%</span> <span>Since last month</span></div>
+              <div className="flex items-center gap-1 mt-2 text-sm"> <ArrowUp className="w-5 h-5 text-danger" /><span className="text-danger">29.36%</span> <span>Since last month</span></div>
             </div>
-            <Button className="flex-none h-12 w-12 p-0 rounded-full bg-destructive"  >
+            <Button className="flex-none h-12 w-12 p-0 rounded-full bg-danger"  >
               <Box className="w-6 h-6 text-primary-foreground" />
             </Button>
           </div>

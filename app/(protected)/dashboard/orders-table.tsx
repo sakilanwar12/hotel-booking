@@ -20,7 +20,7 @@ const getStatusColor = (status: "Shipped" | "Pending" | "Delivered" | "Cancelled
         "Shipped": "bg-primary",
         "Pending": "bg-info",
         "Delivered": "bg-success",
-        "Cancelled": "bgdestructive",
+        "Cancelled": "bgdanger",
         "Processing": "bg-warning"
     }
     return statusColors[status];
@@ -54,7 +54,7 @@ const OrdersTable = ({ orders }: OrdersProps) => {
                             </TableCell>
                             <TableCell className="flex justify-end items-center gap-2.5">
                                 <SquarePen className="h-4 w-4 text-default-500 cursor-pointer hover:text-primary" />
-                                <Trash2 className="h-4 w-4 text-default-500 cursor-pointer hover:text-destructive" />
+                                <Trash2 className="h-4 w-4 text-default-500 cursor-pointer hover:text-danger" />
                             </TableCell>
                         </TableRow>
                     ))

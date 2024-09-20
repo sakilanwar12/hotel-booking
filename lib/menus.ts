@@ -30,10 +30,6 @@ export const menus: MenuProps[] = [
       {
         title: "Education Apps",
         href: "education-apps",
-      },
-      {
-        title: "Ecommerce",
-        href: "ecommerce"
       }
     ]
   },
@@ -43,12 +39,16 @@ export const menus: MenuProps[] = [
     icon: "simple-line-icons:docs",
     child: [
       {
-        title: "Authentication",
-        href: "education-apps",
+        title: "Login",
+        href: "/",
       },
       {
-        title: "Ecommerce",
-        href: "ecommerce"
+        title: "Sign Up",
+        href: "/auth/signup"
+      },
+      {
+        title: "Forgot",
+        href: "/auth/forgot"
       }
     ]
   },

@@ -112,7 +112,7 @@ export const campaignData = [
         isIncrease: true,
         rate: "9.8",
         icon: "basil:linkedin-outline",
-        color: "destructive"
+        color: "danger"
     },
     {
         id: 6,
@@ -121,7 +121,7 @@ export const campaignData = [
         isIncrease: false,
         rate: "9.8",
         icon: "hugeicons:pinterest",
-        color: "destructive"
+        color: "danger"
     },
     {
         id: 7,
@@ -130,7 +130,7 @@ export const campaignData = [
         isIncrease: true,
         rate: "9.8",
         icon: "arcticons:x-twitter",
-        color: "destructive"
+        color: "danger"
     }
 ]
 
@@ -168,7 +168,7 @@ export const activityData = [
         title: "Design Meetup",
         time: "5 days ago",
         icon: "fluent:design-ideas-20-regular",
-        color: "destructive"
+        color: "danger"
     }
 ]
 
