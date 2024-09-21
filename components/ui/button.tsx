@@ -6,24 +6,24 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center px-3.5 justify-center border border-default whitespace-nowrap hover:shadow rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center px-3.5 justify-center whitespace-nowrap hover:shadow rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       color: {
-        default: "bg-primary text-primary-foreground border-primary hover:bg-primary/90",
-        primary: "bg-primary text-primary-foreground border-primary hover:bg-primary/90",
-        secondary: "bg-secondary text-secondary-foreground border-secondary hover:bg-secondary/80",
-        success: "bg-success text-success-foreground hover:bg-success/80 border-success",
-        info: "bg-info text-info-foreground hover:bg-info/80 border-info",
-        warning: "bg-warning text-warning-foreground hover:bg-warning/80 border-warning",
-        danger: "bg-danger text-danger-foreground hover:bg-danger/90 border-danger",
+        default: "bg-primary text-primary-foreground  hover:bg-primary/90",
+        primary: "bg-primary text-primary-foreground  hover:bg-primary/90",
+        secondary: "bg-secondary text-secondary-foreground  hover:bg-secondary/80",
+        success: "bg-success text-success-foreground hover:bg-success/80 ",
+        info: "bg-info text-info-foreground hover:bg-info/80 ",
+        warning: "bg-warning text-warning-foreground hover:bg-warning/80 ",
+        danger: "bg-danger text-danger-foreground hover:bg-danger/90",
 
       },
       variant: {
         default:"",
         ghost: "bg-transparent hover:bg-primary/10 hover:text-default-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        outline: "bg-transparent hover:bg-default/10  text-default   ",
+        outline: "bg-transparent hover:bg-default/10  text-default border border-default  ",
       },
       size: {
         sm: "h-8 text-xs rounded-md px-3",
@@ -36,32 +36,32 @@ const buttonVariants = cva(
       {
         variant: "outline",
         color:"primary",
-        className:"text-primary"
+        className:"text-primary border-primary"
       },
       {
         variant: "outline",
         color:"secondary",
-        className:"text-default-400"
+        className:"text-default-400 border-secondary"
       },
       {
         variant: "outline",
         color:"info",
-        className:"text-info"
+        className:"text-info border-info"
       },
       {
         variant: "outline",
         color:"warning",
-        className:"text-warning"
+        className:"text-warning border-warning"
       },
       {
         variant: "outline",
         color:"danger",
-        className:"text-danger"
+        className:"text-danger border-danger"
       },
       {
         variant: "outline",
         color:"success",
-        className:"text-success"
+        className:"text-success border-success"
       },
     ],
     defaultVariants: {
