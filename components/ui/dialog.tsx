@@ -3,9 +3,9 @@
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
-
 import { cn } from "@/lib/utils"
 import { cva } from "class-variance-authority"
+import { sizes } from "@/lib/types"
 
 
 const Dialog = DialogPrimitive.Root
@@ -45,7 +45,7 @@ const DialogOverlay = React.forwardRef<
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 
 interface DialogContentProps extends React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> {
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: sizes;
 }
 
 const DialogContent = React.forwardRef<

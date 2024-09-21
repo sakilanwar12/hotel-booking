@@ -40,7 +40,7 @@ const Card = ({ title, code, children }: CardSnippetProps) => {
         )}
         {code && (
           <div className="flex-none">
-           <Button color="secondary" size="icon" variant={show?"default":"ghost"}  onClick={toggle}>
+           <Button color="secondary" size="icon" variant={show?"solid":"ghost"}  onClick={toggle}>
             <Code className="w-4 h-4" />
            </Button>
           </div>
@@ -52,7 +52,7 @@ const Card = ({ title, code, children }: CardSnippetProps) => {
           <CollapsibleContent className="CollapsibleContent">
             <SyntaxHighlighter
               language="javascript"
-              className=" rounded-md  text-sm mt-6 "
+              className=" rounded-md  text-sm mt-6 px-2"
               style={atomOneDark}
             >
               {`${code}`}
