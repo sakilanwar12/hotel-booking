@@ -59,7 +59,7 @@ export const menus: MenuProps[] = [
     child: [
       {
         title: "Input",
-        href: "#",
+        href: "/forms/input",
       },
       {
         title: "Input Group",

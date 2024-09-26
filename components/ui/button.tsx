@@ -17,7 +17,6 @@ const buttonVariants = cva(
         info: "bg-info text-info-foreground hover:bg-info/80 ",
         warning: "bg-warning text-warning-foreground hover:bg-warning/80 ",
         danger: "bg-danger text-danger-foreground hover:bg-danger/90",
-
       },
       variant: {
         solid:"",

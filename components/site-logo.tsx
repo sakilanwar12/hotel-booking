@@ -15,7 +15,7 @@ const SiteLogo = ({ className }: { className?: string }) => {
           alt="DashUI Logo"
           width={42}
           height={42}
-          className="w-fit h-full"
+          className="w-10 h-10 rounded-md"
         />
 
         <span className={cn("font-robotoSlab text-lg font-bold hidden md:block",
