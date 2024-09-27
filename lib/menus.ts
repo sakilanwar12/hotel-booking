@@ -62,9 +62,9 @@ export const menus: MenuProps[] = [
         href: "/forms/input",
       },
       {
-        title: "Input Group",
-        href: "#"
-      }
+        title: "Textarea",
+        href: "/forms/textarea",
+      },
     ]
   },
   {
