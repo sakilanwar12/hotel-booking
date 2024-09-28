@@ -6,7 +6,6 @@ import { useSidebar } from "@/store";
 import { cn } from "@/lib/utils";
 import UserProfile from "./user-profile";
 import ShoppingCart from "./cart";
-import Apps from "./apps";
 import SearchContent from "./search-content";
 import { Icon } from "@/components/ui/icon";
 
@@ -51,7 +50,6 @@ const Header = () => {
         <div className="flex-1 flex items-center gap-4 lg:gap-6 justify-end pe-6 lg:pe-10">
           <SearchContent />
           <ThemeButton />
-          <Apps />
           <ShoppingCart />
           <Notification />
           <UserProfile />

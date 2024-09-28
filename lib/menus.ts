@@ -12,15 +12,10 @@ export interface MenuProps {
 }
 export const menus: MenuProps[] = [
   {
-    title: "Dashboard",
-    icon: "material-symbols-light:dashboard-customize-outline-rounded",
-    href: "/dashboard",
-    child: [
-      {
-        title: "Dashboard",
-        href: "/dashboard"
-      }
-    ]
+    title: "Home",
+    icon: "heroicons:home",
+    href: "/home",
+    child: []
   },
   {
     title: "Apps",
@@ -97,17 +92,7 @@ export const menus: MenuProps[] = [
       }
     ]
   },
-  {
-    title: "Charts",
-    href: "/charts/appex/a",
-    icon: "heroicons:chart-bar",
-    child: [
-      {
-        title: "Appex Chart",
-        href: "/charts/appex",
-      }
-    ]
-  },
+
 
 
 ]

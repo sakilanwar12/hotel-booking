@@ -33,6 +33,7 @@ const ExpandMenu = ({ menu }: ExpandMenuProps) => {
           <ChevronRight
             className={cn("w-4 h-4 text-default-500 flex-none transition-transform duration-300 group-hover:text-primary", {
               "rotate-90": open,
+              "hidden":menu.child.length === 0
             })} />
         </div>
       </CollapsibleTrigger>
