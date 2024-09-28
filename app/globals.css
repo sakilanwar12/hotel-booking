@@ -5,7 +5,7 @@
 @layer base {
   :root {
 
-    --background: 210 40% 98%;
+    --background: 184 65% 95%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221 83% 53%;
+    --primary: 226 99% 63%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -95,7 +95,6 @@
 
   body {
     font-family: var(--font-inter);
-    @apply bg-background text-foreground;
   }
 
   h1,

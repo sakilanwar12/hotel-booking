@@ -1,5 +1,8 @@
 
 import { Inter, Roboto_Slab } from 'next/font/google'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import "./globals.css";
 import AuthProvider from "@/providers/auth-provider";
 import ThemeProvider from "@/providers/theme-provider";
