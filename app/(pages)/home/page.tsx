@@ -3,6 +3,8 @@ import Sliders from "./sliders";
 import { venuesData } from "@/data/venues";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import EventSlider from "./event-slider";
+import { eventsData } from "@/data/events";
 
 const HomePage = () => {
     return (
@@ -21,6 +23,9 @@ const HomePage = () => {
             <Section className="bg-card">
                 <Container>
                     <SectionTitle>Decoration Event</SectionTitle>
+                    <div className="py-10">
+                        <EventSlider data={eventsData} />
+                    </div>
                 </Container>
             </Section>
             <Section>
