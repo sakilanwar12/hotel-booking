@@ -1,7 +1,6 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { VenuesData } from "@/data/venues";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Pagination } from "swiper/modules";
 import { EventsData } from "@/data/events";
 import Typography from "@/components/ui/typography";
-import { LocateIcon, SendIcon } from "lucide-react";
+import {  SendIcon } from "lucide-react";
 interface DataProps {
   data: EventsData[];
 }

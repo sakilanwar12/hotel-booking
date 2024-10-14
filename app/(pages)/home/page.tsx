@@ -5,6 +5,8 @@ import EventSlider from "./event-slider";
 import { eventsData } from "@/data/events";
 import FoodCard from "./food-card";
 import { foodsData } from "@/data/foods";
+import { hotelsData } from "@/data/hotels";
+import HotelCard from "./hotel-card";
 
 const HomePage = () => {
   return (
@@ -39,6 +41,11 @@ const HomePage = () => {
       <Section className="bg-card">
         <Container>
           <SectionTitle>Select The restaurant of your choice</SectionTitle>
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            {hotelsData.map((item, index) => (
+              <HotelCard key={`hotel-card-${index}`} item={item} />
+            ))}
+          </div>
         </Container>
       </Section>
       <Section>

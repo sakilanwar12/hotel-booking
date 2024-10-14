@@ -13,7 +13,7 @@ interface TypographyProps {
 const typographyVariants = {
   h1: 'text-4xl font-bold text-default-900',
   h2: 'text-3xl font-semibold text-default-800',
-  h3: 'text-2xl font-medium text-default-700',
+  h3: 'text-lg font-medium text-default-900',
   p: 'text-sm text-default-700',
   span: 'text-sm text-default-500',
   caption: 'text-xs text-default-400',
