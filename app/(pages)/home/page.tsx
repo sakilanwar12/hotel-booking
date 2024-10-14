@@ -1,11 +1,10 @@
 import { Container, Section, SectionTitle } from "@/components/section";
 import Sliders from "./sliders";
 import { venuesData } from "@/data/venues";
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
 import EventSlider from "./event-slider";
 import { eventsData } from "@/data/events";
 import FoodCard from "./food-card";
+import { foodsData } from "@/data/foods";
 
 const HomePage = () => {
   return (
@@ -30,12 +29,10 @@ const HomePage = () => {
       <Section>
         <Container>
           <SectionTitle>Nowring Food Kitchen</SectionTitle>
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <FoodCard />
-            {/* <Button variant={"outline"}>
-              <Plus className="me-2 h-4 w-4" />
-              Add to Cart
-            </Button> */}
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 2xl:grid-cols-4">
+            {foodsData.map((item, index) => (
+              <FoodCard key={`food-card-${index}`} item={item} />
+            ))}
           </div>
         </Container>
       </Section>
