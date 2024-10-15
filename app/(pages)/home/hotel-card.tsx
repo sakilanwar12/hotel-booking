@@ -14,7 +14,7 @@ import Link from "next/link";
 
 import Image from "next/image";
 const HotelCard = ({ item }: { item: Hotel }) => {
-  const { title, permalink, location, rating, utils, price, images } = item;
+  const { id, title, permalink, location, rating, utils, price, images } = item;
   return (
     <Card className="border border-border/40 shadow-lg drop-shadow-2xl">
       <CardContent>
@@ -22,11 +22,14 @@ const HotelCard = ({ item }: { item: Hotel }) => {
           <Swiper
             className="hotelSlider"
             slidesPerView={1}
-            pagination={{ clickable: true }}
+            pagination={{
+              el: `.hotelSlider-pagination-${id}`,
+              clickable: true,
+            }}
             modules={[Pagination]}
           >
             {images.map((slideImage, index) => (
-              <SwiperSlide key={`item-${index}`} className="h-[200px] w-full">
+              <SwiperSlide key={`item-${index}`} className="h-[230px] w-full">
                 <Image
                   src={slideImage}
                   alt="hotel"
@@ -37,7 +40,11 @@ const HotelCard = ({ item }: { item: Hotel }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="hotelSlider-pagination"></div>
+          <div className="absolute bottom-2 start-1/2 -translate-x-1/2 z-50 bg-black/60 px-2.5 rounded-full ">
+            <div className={`hotelSlider-pagination-${id} [&>span]:bg-white/80 [&>span]:w-2.5 [&>span]:h-2.5 [&>span]:rounded-full [&>span]:mx-1 [&>span]:transition-all [&>span]:duration-300 [&>span]:ease-in-out]
+            [&>span.swiper-pagination-bullet-active]:bg-white   [&>span.swiper-pagination-bullet-active]:w-3.5
+            `}></div>
+          </div>
         </div>
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
           <Typography as="h3">

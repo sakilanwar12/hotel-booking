@@ -12,7 +12,7 @@ const MainLayout =  ({ children }: { children: React.ReactNode }) => {
         <Fragment>
             <Header />
             <Sidebar />
-            <div className="h-[calc(100vh-64px)] w-full flex flex-col">
+            <div className=" w-full flex flex-col">
                 <div className={cn("flex-1 lg:ps-[220px]",{
                     "lg:ps-16":collapsed
                 })}>

@@ -1,8 +1,4 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import {
   Command,
   CommandEmpty,
@@ -11,12 +7,20 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command"
-import { Search } from "lucide-react"
+} from "@/components/ui/command";
+import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
 const SearchContent = () => {
   return (
     <Dialog>
-      <DialogTrigger>   <Search className="w-5 h-5 text-default-700" /></DialogTrigger>
+      <DialogTrigger asChild>
+        <Button
+          variant="outline"
+          className="relative min-w-[220px] rounded-full border-border shadow-none hover:shadow-none lg:min-w-[400px]"
+        >
+          <Search className="absolute end-3 top-1/2 h-5 w-5 -translate-y-1/2 text-default-300" />
+        </Button>
+      </DialogTrigger>
       <DialogContent className="p-0">
         <Command>
           <CommandInput placeholder="Type a command or search..." />
@@ -37,7 +41,6 @@ const SearchContent = () => {
         </Command>
       </DialogContent>
     </Dialog>
-
   );
 };
 

@@ -7,11 +7,16 @@ import FoodCard from "./food-card";
 import { foodsData } from "@/data/foods";
 import { hotelsData } from "@/data/hotels";
 import HotelCard from "./hotel-card";
+import HeroSlider from "./hero-slider";
 
 const HomePage = () => {
   return (
     <div>
-      <section className="bg-card py-16 lg:py-24"></section>
+      <Section className="py-0 lg:py-0">
+        <Container>
+          <HeroSlider />
+        </Container>
+      </Section>
       <Section className="bg-background py-16 lg:py-24">
         <Container>
           <SectionTitle>Venues in your city</SectionTitle>
