@@ -17,10 +17,6 @@ const HeroSlider = () => {
           el: ".hero-pagination",
           clickable: true,
         }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
         modules={[Pagination]}
       >
         {sliders.map((item, index) => (
@@ -37,7 +33,7 @@ const HeroSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="hero-pagination absolute bottom-4 start-1/2 z-50 flex -translate-x-1/2 justify-center gap-3 [&>span]:h-3 [&>span]:w-3 [&>span]:cursor-pointer [&>span]:rounded-full [&>span]:bg-white [&>span]:transition-all [&>span]:duration-300"></div>
+      <div className="hero-pagination absolute bottom-4 left-1/2 z-50 flex -translate-x-1/2 justify-center gap-3 [&>span]:h-3 [&>span]:w-3 [&>span]:cursor-pointer [&>span]:rounded-full [&>span]:bg-white [&>span]:transition-all [&>span]:duration-300"></div>
     </div>
   );
 };

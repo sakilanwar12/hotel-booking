@@ -1,13 +1,10 @@
-
-import { Inter, Roboto_Slab } from 'next/font/google'
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Inter, Roboto_Slab } from "next/font/google";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "./globals.css";
-import AuthProvider from "@/providers/auth-provider";
 import ThemeProvider from "@/providers/theme-provider";
-
 
 export const metadata = {
   title: "Create Next App",
@@ -15,17 +12,16 @@ export const metadata = {
 };
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
- 
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 const jost = Roboto_Slab({
-  subsets: ['latin'],
-  variable: '--font-roboto-slab',
-  display: 'swap',
-})
- 
+  subsets: ["latin"],
+  variable: "--font-roboto-slab",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -35,11 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jost.variable}`}>
       <body className="shopdash-app" suppressHydrationWarning={true}>
-        <AuthProvider>
-           <ThemeProvider attribute="class" defaultTheme="light">
-            {children}
-          </ThemeProvider>
-        </AuthProvider>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
