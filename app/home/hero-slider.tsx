@@ -1,39 +1,42 @@
 "use client";
+import { useRef } from "react";
+import Slider from "react-slick";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+
+const sliders = [
+  "https://i.ibb.co/TMXhmfM/img3.jpg",
+  "https://i.ibb.co/TMXhmfM/img3.jpg",
+  "https://i.ibb.co/TMXhmfM/img3.jpg",
+];
 const HeroSlider = () => {
-  const sliders = [
-    "/images/all/hero-1.png",
-    "/images/all/hero-2.png",
-    "/images/all/hero-3.png",
-    "/images/all/hero-4.png",
-  ];
+
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+  };
+
   return (
-    <div className="relative">
-        
-      <Swiper
-        pagination={{
-          el: ".hero-pagination",
-          clickable: true,
-        }}
-        modules={[Pagination]}
-      >
+    <div className="hero-slider">
+      <Slider {...settings} >
         {sliders.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="h-[500px] w-full rounded-b-md overflow-hidden">
-              <Image
-                src={item}
-                alt="slider"
-                width={1500}
-                height={500}
-                className="h-full w-full rounded-b-md"
-              />
-            </div>
-          </SwiperSlide>
+          <div className="w-full  rounded-b-md h-[500px]" key={index}>
+            <Image
+              src={item}
+              alt="slider"
+              width={1500}
+              height={1000}
+              className="h-[500px] w-full rounded-b-md  object-center"
+            />
+          </div>
         ))}
-      </Swiper>
-      <div className="hero-pagination absolute bottom-4 left-1/2 z-50 flex -translate-x-1/2 justify-center gap-3 [&>span]:h-3 [&>span]:w-3 [&>span]:cursor-pointer [&>span]:rounded-full [&>span]:bg-white [&>span]:transition-all [&>span]:duration-300"></div>
+      </Slider>
     </div>
   );
 };

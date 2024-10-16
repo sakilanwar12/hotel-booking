@@ -13,8 +13,9 @@
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
+    
+    --primary: 226 99% 63%; 
 
-    --primary: 226 99% 63%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -109,4 +110,27 @@
   a {
     @apply transition-all duration-300 hover:text-primary;
   }
+}
+
+
+/* slick slider */
+
+
+
+.hero-slider .slick-dots {
+  bottom: 24px;
+}
+
+.hero-slider .slick-dots li button:before {
+  font-size: 14px;
+  color: #f87171;
+}
+
+.hero-slider .slick-prev {
+  z-index: 999;
+  left: 25px;
+}
+.hero-slider .slick-next {
+  z-index: 999;
+  right: 25px;
 }
