@@ -1,6 +1,6 @@
 export const eventsData =[ 
     {
-    image:"/images/room/room-1.jpg",
+    image:"https://i.ibb.co/ky0zZ62/enent1.jpg",
     title: 'Panigrahana Weddings...',
     permalink:"#",
     location: 'North Bangalore, Bangalore',
@@ -11,7 +11,7 @@ export const eventsData =[
     services: ['Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+','Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+'],
   },
     {
-    image:"/images/room/room-1.jpg",
+    image:"https://i.ibb.co/ky0zZ62/enent1.jpg",
     title: 'Panigrahana Weddings...',
     permalink:"#",
     location: 'North Bangalore, Bangalore',
@@ -22,7 +22,7 @@ export const eventsData =[
     services: ['Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+','Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+'],
   },
     {
-    image:"/images/room/room-1.jpg",
+    image:"https://i.ibb.co/ky0zZ62/enent1.jpg",
     title: 'Panigrahana Weddings...',
     permalink:"#",
     location: 'North Bangalore, Bangalore',
@@ -33,7 +33,7 @@ export const eventsData =[
     services: ['Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+','Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+'],
   },
     {
-    image:"/images/room/room-1.jpg",
+    image:"https://i.ibb.co/ky0zZ62/enent1.jpg",
     title: 'Panigrahana Weddings...',
     permalink:"#",
     location: 'North Bangalore, Bangalore',
@@ -44,7 +44,7 @@ export const eventsData =[
     services: ['Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+','Home function decor 25+', 'Home function decor 25+', 'Home function decor 25+'],
   },
     {
-    image:"/images/room/room-1.jpg",
+    image:"https://i.ibb.co/ky0zZ62/enent1.jpg",
     title: 'Panigrahana Weddings...',
     permalink:"#",
     location: 'North Bangalore, Bangalore',
