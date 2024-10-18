@@ -94,18 +94,7 @@
     @apply border-border;
   }
 
-  body {
-    font-family: var(--font-inter);
-  }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-roboto-slab);
-  }
 
   a {
     @apply transition-all duration-300 hover:text-primary;

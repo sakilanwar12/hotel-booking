@@ -16,7 +16,7 @@ const SearchContent = () => {
       <DialogTrigger asChild>
         <Button
           variant="outline"
-          className="relative min-w-[220px] rounded-full border-default-300 shadow-none hover:shadow-none lg:min-w-[400px]"
+          className="relative w-[120px]  md:min-w-[220px] rounded-full border-default-300 shadow-none hover:shadow-none lg:min-w-[400px]"
         >
           <Search className="absolute end-3 top-1/2 h-5 w-5 -translate-y-1/2 text-default-300" />
         </Button>

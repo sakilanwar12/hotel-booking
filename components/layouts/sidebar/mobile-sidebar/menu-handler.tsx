@@ -24,7 +24,7 @@ const MenuHandler = ({ menu, toggleCollapsed }: ExpandMenuProps) => {
           {menu.icon && (
             <menu.icon className="w-4 h-4 flex-none me-2 text-primary/80 group-hover:text-primary" />
           )}
-          <span className="flex-1 text-xs font-medium font-robotoSlab text-default-700 mt-0.2 group-hover:text-primary">
+          <span className="flex-1 text-xs font-medium text-default-700 mt-0.2 group-hover:text-primary">
             {menu.title}
           </span>
           <ChevronRight

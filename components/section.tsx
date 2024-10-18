@@ -9,7 +9,7 @@ const SectionTitle = ({ children, className }: { children: React.ReactNode, clas
 
 const Section = ({ children, className }: { children: React.ReactNode, className?: string }) => {
     return (
-        <div className={cn("bg-background py-16 lg:py-24", className)}>
+        <div className={cn("bg-background py-11 lg:py-14", className)}>
             {children}
         </div>
     );

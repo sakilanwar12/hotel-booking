@@ -1,98 +1,80 @@
-
-
-export interface SubmenuProps {
-  title: string;
-  href: string;
-}
 export interface MenuProps {
   title: string;
   href: string;
-  icon?: any;
-  child?: SubmenuProps[]
+  icon?: string;
 }
 export const menus: MenuProps[] = [
   {
     title: "Home",
     icon: "heroicons:home",
     href: "/home",
-    child: []
   },
   {
-    title: "Apps",
-    href: "#",
-    icon: "arcticons:amazon-appstore",
-    child: [
-      {
-        title: "Education Apps",
-        href: "education-apps",
-      }
-    ]
+    title: "Save",
+    icon: "cil:save",
+    href: "/save",
   },
   {
-    title: "Pages",
-    href: "#",
-    icon: "simple-line-icons:docs",
-    child: [
-      {
-        title: "Login",
-        href: "/",
-      },
-      {
-        title: "Sign Up",
-        href: "/auth/signup"
-      },
-      {
-        title: "Forgot",
-        href: "/auth/forgot"
-      }
-    ]
+    title: "Support",
+    icon: "heroicons-outline:support",
+    href: "/support",
   },
   {
-    title: "Forms",
-    href: "#",
-    icon: "cil:input-hdmi",
-    child: [
-      {
-        title: "Input",
-        href: "/forms/input",
-      },
-      {
-        title: "Textarea",
-        href: "/forms/textarea",
-      },
-    ]
+    title: "Cart List",
+    icon: "heroicons:shopping-cart",
+    href: "/cart-list",
   },
   {
-    title: "Components",
-    href: "/accordion",
-    icon: "arcticons:graphene-apps",
-    child: [
-      {
-        title: "Accordion",
-        href: "/components/accordion",
-      },
-      {
-        title: "Button",
-        href: "/components/button"
-      },
-      {
-        title: "Dialog",
-        href: "/components/dialog"
-      },
-    ]
+    title: "Orders",
+    icon: "heroicons:clipboard-document-list-solid",
+    href: "/orders",
   },
   {
-    title: "Table",
-    href: "/table/basic",
-    icon: "heroicons:table-cells",
-    child: [
-      {
-        title: "Basic Table",
-        href: "/table/basic",
-      }
-    ]
+    title: "Category",
+    icon: "tabler:category-filled",
+    href: "/category",
   },
+  {
+    title: "Hotel",
+    icon: "fa-solid:hotel",
+    href: "/hotel",
+  },
+  {
+    title: "Weeding Venue",
+    icon: "cil:weightlifitng",
+    href: "/weeding-venue",
+  },
+  {
+    title: "Weeding Event",
+    icon: "heroicons:calendar-date-range",
+    href: "/weeding-event",
+  },
+];
 
-
-
-]
+export const mobileFooterMenu: MenuProps[] = [
+  {
+    title: "Home",
+    icon: "heroicons:home",
+    href: "/home",
+  },
+  {
+    title: "Search",
+    icon: "cil:save",
+    href: "/save",
+  },
+  {
+    title: "Analytics",
+    icon: "heroicons-outline:support",
+    href: "/support",
+  },
+  {
+    title: "History",
+    icon: "heroicons-outline:support",
+    href: "/support",
+  },
+  {
+    title: "Profile",
+    icon: "heroicons-outline:support",
+    href: "/support",
+  },
+];

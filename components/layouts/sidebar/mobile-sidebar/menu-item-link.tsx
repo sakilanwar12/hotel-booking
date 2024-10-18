@@ -8,7 +8,7 @@ const MenuItemLink = ({ className, item, toggleCollapsed }: any) => {
     <Link
       href={href}
       onClick={() => toggleCollapsed()}
-      className={cn("text-sm font-robotoSlab text-default-700 block ps-7 py-1", className)}>
+      className={cn("text-sm  text-default-700 block ps-7 py-1", className)}>
       {title}
     </Link>
   );
