@@ -9,7 +9,7 @@ import { MenuIcon } from "lucide-react";
 const FooterMenu = () => {
   const { collapsed, setCollapsed } = useSidebar();
   return (
-    <Card className="fixed bottom-0 start-0 z-50 w-full rounded-none lg:hidden">
+    <Card className="fixed bottom-0 start-0 z-50 w-full rounded-none lg:hidden p-0">
       <CardContent className="py-1">
         <div className="container">
           <div className="flex justify-center gap-5 py-3">
