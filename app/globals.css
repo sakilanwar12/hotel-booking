@@ -93,9 +93,6 @@
   * {
     @apply border-border;
   }
-
-
-
   a {
     @apply transition-all duration-300 hover:text-primary;
   }
@@ -116,10 +113,12 @@
 }
 
 .hero-slider .slick-prev {
-  z-index: 999;
+  z-index: 9999;
   left: 25px;
+  top: 40%;
 }
 .hero-slider .slick-next {
-  z-index: 999;
+  z-index: 9999;
   right: 25px;
+  top: 40%;
 }
