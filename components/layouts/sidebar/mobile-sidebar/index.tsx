@@ -8,8 +8,6 @@ import { MenuProps } from "@/lib/menus";
 import SiteLogo from "@/components/site-logo";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 
 interface MobileSidebar {
   menus: MenuProps[];
@@ -28,17 +26,7 @@ const MobileSidebar = ({ menus, collapsed }: MobileSidebar) => {
       )}
     >
       <div className="flex items-center justify-between py-2.5 pe-2">
-        <Link href="#" className="flex items-center gap-3 ps-3.5">
-          <Image
-            src="/images/logo/logo-2.png"
-            alt="DashUI Logo"
-            width={42}
-            height={42}
-            className="h-8 w-8 rounded-md"
-          />
-
-          <span className="text-lg font-bold"> Book Hotel</span>
-        </Link>
+        <SiteLogo className="ps-3.5"/>
         <Button
           size="icon"
           color="secondary"

@@ -14,7 +14,7 @@ const SiteLogo = ({ className }: { className?: string }) => {
           className="h-8 w-8 rounded-md"
         />
 
-        <span className="hidden text-lg font-bold md:block"> Book Hotel</span>
+        <span className="text-lg font-bold"> Book Hotel</span>
       </Link>
     </div>
   );

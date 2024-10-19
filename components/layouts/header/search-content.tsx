@@ -14,12 +14,15 @@ const SearchContent = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          className="relative w-[120px]  md:min-w-[220px] rounded-full border-default-300 shadow-none hover:shadow-none lg:min-w-[400px]"
-        >
-          <Search className="absolute end-3 top-1/2 h-5 w-5 -translate-y-1/2 text-default-300" />
-        </Button>
+        <div>
+          <Button
+            variant="outline"
+            className="relative w-[120px] rounded-full border-default-300 shadow-none hover:shadow-none md:min-w-[220px] lg:min-w-[400px] hidden md:block"
+          >
+            <Search className="absolute end-3 top-1/2 h-5 w-5 -translate-y-1/2 text-default-300" />
+          </Button>
+          <Search className=" h-5 w-5  text-default-900 md:hidden" />
+        </div>
       </DialogTrigger>
       <DialogContent className="p-0">
         <Command>

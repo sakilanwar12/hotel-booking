@@ -13,8 +13,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 h-16 bg-card shadow">
       <div className="flex h-full items-center justify-between">
-        <div className="relative z-50 flex items-center  px-4 py-4">
-   
+        <div className="relative z-50 flex items-center px-4 py-4">
           <div
             className={cn("hidden transition-all duration-300 xl:block", {
               "": collapsed,
@@ -49,12 +48,15 @@ const Header = () => {
           </div>
           <SiteLogo className="ms-3" />
         </div>
-        <div>
+        <div className="hidden md:block">
           <SearchContent />
         </div>
         <div className="flex items-center justify-end gap-4 pe-6 lg:gap-6">
+          <div className="md:hidden">
+            <SearchContent />
+          </div>
           <ThemeButton />
-          <ShoppingCart/>
+          <ShoppingCart />
           <UserProfile />
         </div>
       </div>
