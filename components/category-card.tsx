@@ -11,7 +11,7 @@ const CategoryCard = ({ href, title, image }: CategoryCardProps) => {
     <Link href={href} className="cursor-pointer">
       <Card className="rounded-none border-none shadow-none">
         <CardContent>
-          <h3 className="mb-3 text-sm font-medium text-default-900 lg:text-lg">
+          <h3 className="md:mb-3 text-sm font-medium text-default-900 lg:text-lg">
             {title}
           </h3>
           <div className="hidden md:block">
