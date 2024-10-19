@@ -58,23 +58,18 @@ export const mobileFooterMenu: MenuProps[] = [
     href: "/home",
   },
   {
-    title: "Search",
+    title: "Orders",
+    icon: "heroicons:clipboard-document-list-solid",
+    href: "/orders",
+  },
+  {
+    title: "Category",
+    icon: "tabler:category-filled",
+    href: "/category",
+  },
+  {
+    title: "Save",
     icon: "cil:save",
     href: "/save",
-  },
-  {
-    title: "Analytics",
-    icon: "heroicons-outline:support",
-    href: "/support",
-  },
-  {
-    title: "History",
-    icon: "heroicons-outline:support",
-    href: "/support",
-  },
-  {
-    title: "Profile",
-    icon: "heroicons-outline:support",
-    href: "/support",
-  },
+  }
 ];
