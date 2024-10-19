@@ -30,7 +30,7 @@ const HeroSlider = () => {
               className="h-[600px] w-full rounded-b-md bg-cover bg-center flex flex-col justify-end"
               style={{ backgroundImage: `url(${item})` }}
             >
-              <div className="px-4  grid grid-cols-4 gap-6">
+              <div className="px-4  grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6">
                 <CategoryCard href="#" title="Extra Savings  with Meem Credit Cards" image="/images/all/branding-1.png" />
                 <CategoryCard href="#" title="Extra Savings  with Meem Credit Cards" image="/images/all/branding-1.png" />
                 <CategoryCard href="#" title="Extra Savings  with Meem Credit Cards" image="/images/all/branding-1.png" />

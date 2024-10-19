@@ -10,8 +10,6 @@ const Sidebar = () => {
   const isLaptop = useMediaQuery(
     "(min-width: 1024px) and (max-width: 1280px)",
   );
-  console.log(isLaptop);
-
 
   return <MainSidebar menus={menus} collapsed={collapsed} isLaptop={isLaptop} />;
 };
