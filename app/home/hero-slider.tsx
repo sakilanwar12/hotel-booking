@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+
 import Slider from "react-slick";
 import Image from "next/image";
 import CategoryCard from "@/components/category-card";
@@ -10,8 +10,9 @@ const sliders = [
   "https://i.ibb.co/TMXhmfM/img3.jpg",
 ];
 const HeroSlider = () => {
+
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -26,20 +27,40 @@ const HeroSlider = () => {
       <Slider {...settings}>
         {sliders.map((item, index) => (
           <div key={index}>
-            <div
-              className="h-[600px] w-full rounded-b-md bg-cover bg-center flex flex-col justify-end"
-              style={{ backgroundImage: `url(${item})` }}
-            >
-              <div className="px-4  grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6">
-                <CategoryCard href="#" title="Extra Savings  with Meem Credit Cards" image="/images/all/branding-1.png" />
-                <CategoryCard href="#" title="Extra Savings  with Meem Credit Cards" image="/images/all/branding-1.png" />
-                <CategoryCard href="#" title="Extra Savings  with Meem Credit Cards" image="/images/all/branding-1.png" />
-                <CategoryCard href="#" title="Extra Savings  with Meem Credit Cards" image="/images/all/branding-1.png" />
-              </div>
+            <div className="h-[550px] w-full lg:h-[600px] ">
+              <Image
+                src={item}
+                alt="hero"
+                width={1200}
+                height={600}
+                className="h-full w-full object-cover object-center "
+              />
             </div>
           </div>
         ))}
       </Slider>
+      <div className="-mt-[318px] grid grid-cols-2 gap-2 px-3 lg:grid-cols-4 lg:gap-6 lg:px-20">
+        <CategoryCard
+          href="#"
+          title="Extra Savings  with Meem Credit Cards"
+          image="/images/all/img-2.jpg"
+        />
+        <CategoryCard
+          href="#"
+          title="Extra Savings  with Meem Credit Cards"
+          image="/images/all/img-2.jpg"
+        />
+        <CategoryCard
+          href="#"
+          title="Extra Savings  with Meem Credit Cards"
+          image="/images/all/img-2.jpg"
+        />
+        <CategoryCard
+          href="#"
+          title="Extra Savings  with Meem Credit Cards"
+          image="/images/all/img-2.jpg"
+        />
+      </div>
     </div>
   );
 };

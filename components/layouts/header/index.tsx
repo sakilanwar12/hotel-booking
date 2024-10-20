@@ -11,7 +11,7 @@ import ShoppingCart from "./cart";
 const Header = () => {
   const { collapsed, setCollapsed } = useSidebar();
   return (
-    <header className="sticky top-0 z-50 h-16 bg-card shadow">
+    <header className="sticky top-0 z-[9999] h-16 bg-card shadow">
       <div className="flex h-full items-center justify-between">
         <div className="relative z-50 flex items-center px-4 py-4">
           <div

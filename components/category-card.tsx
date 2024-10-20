@@ -9,18 +9,18 @@ interface CategoryCardProps {
 const CategoryCard = ({ href, title, image }: CategoryCardProps) => {
   return (
     <Link href={href} className="cursor-pointer">
-      <Card className="rounded-none border-none shadow-none">
+      <Card className="rounded-none border-none shadow-none rounded-t-md">
         <CardContent>
-          <h3 className="md:mb-3 text-sm font-medium text-default-900 lg:text-lg">
+          <h3 className="mb-3 text-sm font-medium text-default-900 lg:text-lg">
             {title}
           </h3>
-          <div className="hidden md:block">
+          <div className=" h-[120px] lg:h-[196px] rounded">
             <Image
               src={image}
               alt="branding"
               width={300}
               height={300}
-              className="h-[120px] w-full object-cover lg:h-full"
+              className="h-full w-full object-cover"
             />
           </div>
         </CardContent>

@@ -4,8 +4,7 @@
 
 @layer base {
   :root {
-
-    --background: 184 65% 95%;
+    --background: 216 20% 95%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,8 +12,8 @@
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    
-    --primary: 226 99% 63%; 
+
+    --primary: 226 99% 63%;
 
     --primary-foreground: 0 0% 100%;
 
@@ -36,7 +35,7 @@
     --warning: 351 95% 71%;
     --warning-foreground: 0 0% 100%;
 
-    --danger:347 77% 50%;
+    --danger: 347 77% 50%;
     --danger-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
@@ -44,7 +43,7 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-
+   
     --default-50: 210 20% 98%;
     --default-100: 220 14% 96%;
     --default-200: 220 16% 92%;
@@ -56,6 +55,8 @@
     --default-800: 220 22% 17%;
     --default-900: 220 30% 11%;
     --default: 220 60% 4%;
+   
+    --bg-section:340 14% 83%;
   }
 
   .dark {
@@ -98,10 +99,7 @@
   }
 }
 
-
 /* slick slider */
-
-
 
 .hero-slider .slick-dots {
   bottom: 24px;
@@ -115,10 +113,36 @@
 .hero-slider .slick-prev {
   z-index: 9999;
   left: 25px;
-  top: 40%;
+  top: 35%;
 }
 .hero-slider .slick-next {
   z-index: 9999;
   right: 25px;
-  top: 40%;
+  top: 35%;
+}
+
+.slick-gap .slick-track {
+  display: flex;
+  gap: 14px;
+}
+.custom-slick-arrow .slick-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #fff;
+}
+.custom-slick-arrow .slick-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #fff;
+  z-index: 999;
+}
+
+.custom-slick-arrow .slick-prev:before,
+.custom-slick-arrow .slick-next:before {
+  color: rgb(67, 111, 254);
+}
+.custom-slick-arrow .slick-prev {
+  left: -20px;
 }

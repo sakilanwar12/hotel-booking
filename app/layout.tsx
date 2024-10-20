@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"  className={inter.className}>
-      <body className="shopdash-app" >
+      <body className="shopdash-app bg-background" >
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>

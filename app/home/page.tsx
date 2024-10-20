@@ -1,4 +1,9 @@
-import { Container, Section, SectionTitle } from "@/components/section";
+import {
+  Container,
+  Section,
+  SectionLayer,
+  SectionTitle,
+} from "@/components/section";
 import Sliders from "./sliders";
 import { venuesData } from "@/data/venues";
 import EventSlider from "./event-slider";
@@ -8,49 +13,69 @@ import { foodsData } from "@/data/foods";
 import { hotelsData } from "@/data/hotels";
 import HotelCard from "./hotel-card";
 import HeroSlider from "./hero-slider";
+import { resturantData } from "@/data/resturant";
+import ResturantCard from "./resturant-card";
 
 const HomePage = () => {
   return (
     <div>
-      <Section className="py-0 lg:py-0">
+      <Section className="py-0">
         <Container>
           <HeroSlider />
         </Container>
       </Section>
-      <Section className="bg-background py-16 lg:py-24">
+      <Section>
         <Container>
-          <SectionTitle>Venues in your city</SectionTitle>
-          <div className="py-10">
+          <SectionLayer>
+            <SectionTitle className="mb-3">Venues in your city</SectionTitle>
             <Sliders data={venuesData} />
-          </div>
+          </SectionLayer>
         </Container>
       </Section>
-      <Section className="bg-card">
+      <Section className="py-0">
         <Container>
-          <SectionTitle>Decoration Event</SectionTitle>
-          <div className="py-10">
+          <SectionLayer>
+            <SectionTitle>Decoration Event</SectionTitle>
             <EventSlider data={eventsData} />
-          </div>
+          </SectionLayer>
         </Container>
       </Section>
       <Section>
         <Container>
-          <SectionTitle>Nowring Food Kitchen</SectionTitle>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 2xl:grid-cols-4">
-            {foodsData.map((item, index) => (
-              <FoodCard key={`food-card-${index}`} item={item} />
-            ))}
-          </div>
+          <SectionLayer>
+            <SectionTitle>Nowring Food Kitchen</SectionTitle>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 2xl:grid-cols-4">
+              {foodsData.map((item, index) => (
+                <FoodCard key={`food-card-${index}`} item={item} />
+              ))}
+            </div>
+          </SectionLayer>
         </Container>
       </Section>
-      <Section className="bg-card">
+      <Section className="py-0">
         <Container>
-          <SectionTitle>Select The restaurant of your choice</SectionTitle>
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            {hotelsData.map((item, index) => (
-              <HotelCard key={`hotel-card-${index}`} item={item} />
-            ))}
-          </div>
+          <SectionLayer>
+            <SectionTitle>
+              luxury Awaits:Secure your stay with Ease
+            </SectionTitle>
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+              {hotelsData.map((item, index) => (
+                <HotelCard key={`hotel-card-${index}`} item={item} />
+              ))}
+            </div>
+          </SectionLayer>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <SectionLayer>
+            <SectionTitle>Select The restaurant of your choice</SectionTitle>
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+              {resturantData.map((item, index) => (
+                <ResturantCard key={`resturant-card-${index}`} item={item} />
+              ))}
+            </div>
+          </SectionLayer>
         </Container>
       </Section>
       <Section>

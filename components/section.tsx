@@ -1,15 +1,15 @@
 import { cn } from "@/lib/utils";
 
 const SectionTitle = ({ children, className }: { children: React.ReactNode, className?: string }) => {
-    return (
-        <h2 className={cn("text-xl lg:text-2xl text-default-900", className)}>{children}</h2>
+    return ( 
+        <h2 className={cn("text-xl lg:text-2xl text-default-900 font-semibold mb-2", className)}>{children}</h2>
     );
 };
 
 
 const Section = ({ children, className }: { children: React.ReactNode, className?: string }) => {
     return (
-        <div className={cn("bg-background py-11 lg:py-14", className)}>
+        <div className={cn("py-6", className)}>
             {children}
         </div>
     );
@@ -22,4 +22,12 @@ const Container = ({ children, className }: { children: React.ReactNode, classNa
     );
 };
 
-export { Section, SectionTitle ,Container};
+const SectionLayer = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+    return (
+        <div className={cn("bg-section/20 rounded-md p-4", className)}>
+            {children}
+        </div>
+    );
+};
+
+export { Section, SectionTitle ,Container,SectionLayer};

@@ -72,4 +72,9 @@ export const mobileFooterMenu: MenuProps[] = [
     icon: "mdi-light:content-save",
     href: "/save",
   },
+  {
+    title: "Hotel",
+    icon:"heroicons:building-office" ,
+    href: "/hotel",
+  }
 ];
