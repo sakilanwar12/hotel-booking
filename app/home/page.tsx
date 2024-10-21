@@ -98,6 +98,7 @@ const HomePage = () => {
           </SectionLayer>
         </Container>
       </Section>
+      <div className="h-20 lg:hidden"></div>
     </div>
   );
 };

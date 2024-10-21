@@ -1,9 +1,7 @@
 "use client";
 
 import Slider from "react-slick";
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ImageSlider from "./image-slider";
@@ -113,17 +111,28 @@ const WeedingSlider = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
-  const settings2 = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-  };
+ 
   return (
     <div className="weeding-slider custom-slick-arrow">
       <Slider {...settings}>
