@@ -67,7 +67,10 @@ const ResturantCard = ({ item }: { item: Resturant }) => {
             </span>
           </div>
         </div>
-        <Typography as="p" className="mt-4 flex items-center gap-1 justify-center">
+        <Typography
+          as="p"
+          className="mt-4 flex items-center justify-center gap-1"
+        >
           <MapPin className="h-5 w-5 text-default-900" />
           {location}
         </Typography>

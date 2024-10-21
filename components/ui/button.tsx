@@ -11,7 +11,7 @@ const buttonVariants = cva(
   {
     variants: {
       color: {
-        primary: "bg-primary text-primary-foreground  hover:bg-primary/90",
+        primary: "bg-primary text-primary-foreground  hover:bg-primary/90 hover:text-primary-foreground",
         secondary: "bg-secondary text-secondary-foreground  hover:bg-secondary/80",
         success: "bg-success text-success-foreground hover:bg-success/80 ",
         info: "bg-info text-info-foreground hover:bg-info/80 ",
@@ -36,7 +36,7 @@ const buttonVariants = cva(
       {
         variant: "outline",
         color:"primary",
-        className:"text-primary border-primary"
+        className:"text-primary border-primary hover:text-primary"
       },
       {
         variant: "outline",
@@ -56,7 +56,7 @@ const buttonVariants = cva(
       {
         variant: "outline",
         color:"danger",
-        className:"text-danger border-danger"
+        className:"text-danger border-danger hover:text-danger"
       },
       {
         variant: "outline",

@@ -43,7 +43,7 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-   
+
     --default-50: 210 20% 98%;
     --default-100: 220 14% 96%;
     --default-200: 220 16% 92%;
@@ -55,8 +55,8 @@
     --default-800: 220 22% 17%;
     --default-900: 220 30% 11%;
     --default: 220 60% 4%;
-   
-    --bg-section:340 14% 83%;
+
+    --bg-section: 340 14% 83%;
   }
 
   .dark {
@@ -145,4 +145,19 @@
 }
 .custom-slick-arrow .slick-prev {
   left: -20px;
+}
+
+.image-slider .slick-track {
+  display: flex;
+  gap: 0px !important;
+}
+.weeding-slider .slick-track {
+  display: flex;
+  gap: 10px;
+  margin-left: -25px;
+}
+.weeding-slider .image-slider .slick-track {
+  display: flex;
+  gap: 0px;
+  margin-left: 0px;
 }

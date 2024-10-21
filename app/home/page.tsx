@@ -15,6 +15,10 @@ import HotelCard from "./hotel-card";
 import HeroSlider from "./hero-slider";
 import { resturantData } from "@/data/resturant";
 import ResturantCard from "./resturant-card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+import WeedingSlider from "./weeding-slider";
 
 const HomePage = () => {
   return (
@@ -80,7 +84,18 @@ const HomePage = () => {
       </Section>
       <Section>
         <Container>
-          <SectionTitle>Promoted Weeding Photographers</SectionTitle>
+          <SectionLayer>
+            <div className="flex justify-between mb-5">
+              <SectionTitle>Promoted Weeding Photographers</SectionTitle>
+              <Button asChild className="group">
+                <Link href="#">
+                  View All
+                  <ChevronRight className="ms-0.5 h-4 w-4 transition duration-300 group-hover:translate-x-0.5" />
+                </Link>
+              </Button>
+            </div>
+            <WeedingSlider />
+          </SectionLayer>
         </Container>
       </Section>
     </div>
